@@ -3,9 +3,16 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
-    background-color: #f0f2f5; /* 浅灰色背景 */
     color: #333;
     line-height: 1.7;
+
+    /* 添加背景图片 */
+    background-image: url('path/to/your/image.jpg'); /* 替换为您的图片路径 */
+    background-size: cover; /* 使图片覆盖整个背景区域 */
+    background-position: center center; /* 图片居中显示 */
+    background-repeat: no-repeat; /* 不重复平铺图片 */
+    background-attachment: fixed; /* 图片随页面滚动而固定，不滚动 */
+    background-color: #f0f2f5; /* 可选：在图片加载失败或透明时显示的备用颜色 */ */
 }
 
 a {
@@ -122,8 +129,6 @@ ol {
     background-color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    overflow: hidden;
-    min-height: 100vh; 
 }
 
 .profile-photo {
@@ -179,7 +184,6 @@ ol {
 .right-column {
     flex: 1;
     padding: 30px;
-    overflow-y: auto;
 }
 
 .section-block {
@@ -307,4 +311,40 @@ ol {
 h3 {
     font-size: 1.2em;
     margin-bottom: 10px; /* Adds space below the title */
+}
+
+/* 定义淡入并位移的 CSS 动画 */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 应用到需要动画效果的元素 */
+.section-block {
+    opacity: 0; /* 初始时不可见 */
+    animation: fadeUp 1s ease-out forwards; /* 动画效果：1秒，渐变并向上移动 */
+}
+
+/* 增加延迟时间，使元素顺序依次动画 */
+.section-block:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.section-block:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.section-block:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+/* 针对每个 section 设置不同的延迟效果 */
+.section-block:nth-child(4) {
+    animation-delay: 0.8s;
 }
