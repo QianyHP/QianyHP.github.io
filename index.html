@@ -1,65 +1,164 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>你的名字 - 个人主页</title>
+    <meta name="description" content="Haopeng Deng's personal homepage showcasing research and portfolio.">
+    <meta name="author" content="Haopeng Deng">
+    <meta name="keywords" content="Haopeng Deng, academic, researcher, portfolio">
+    <title>Haopeng Deng - Homepage</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
 
-    <div class="container">
-        <aside class="left-column">
-            <div class="profile-section">
-                <img src="images/your_profile_photo.jpg" alt="你的个人照片" class="profile-photo">
-                <h2>你的名字</h2>
-                <p class="title">你的职位 / 研究方向</p>
-                </div>
+    <header class="main-header">
+        <div class="header-content">
+            <h1 class="site-title"><a href="index.html"><strong>Haopeng Deng - Homepage</strong></a></h1>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="cv.html">CV</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="personal-statement.html">Personal Statement</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
+    <div class="container">
+        <aside class="left-column" data-aos="fade-right" data-aos-duration="600">
+            <div class="profile-section">
+                <img src="images/your_profile_photo.jpg" alt="Profile photo" class="profile-photo">
+                <h2>Haopeng Deng</h2>
+                <p class="title">Researcher in Transportation Engineering</p>
+            </div>
             <nav class="contact-info">
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> 你的地点 (城市, 国家)</li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">你的邮箱</a></li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/qianyhp" target="_blank">GitHub</a></li>
-                    <li><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a></li>
-                    </ul>
+                    <li data-aos="fade-up" data-aos-delay="50"><i class="fas fa-map-marker-alt"></i> Guangzhou, China</li>
+                    <li data-aos="fade-up" data-aos-delay="100"><i class="fas fa-envelope"></i> <a href="mailto:qianyhp@gmail.com">Email</a></li>
+                    <li data-aos="fade-up" data-aos-delay="150"><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                    <li data-aos="fade-up" data-aos-delay="200"><i class="fab fa-github"></i> <a href="https://github.com/qianyhp" target="_blank">GitHub</a></li>
+                    <li data-aos="fade-up" data-aos-delay="250"><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a></li>
+                </ul>
             </nav>
         </aside>
 
         <main class="right-column">
-            <section class="section-block">
-                <h2>About me</h2>
-                <p>我是 [你的名字]，目前在 [你的大学/机构] 从事 [你的研究方向] 的研究工作。我的研究兴趣包括 [兴趣1]、[兴趣2] 和 [兴趣3]。我致力于 [你的研究目标或贡献]。</p>
-                <p>曾就读于 [你的本科/硕士院校]，获得 [学位]。我的研究经验包括 [简要介绍一些项目或经历]。我期待与您在学术上进行交流与合作。</p>
+            <!-- About Me + Education -->
+            <section class="section-block" id="about-me" data-aos="fade-up" data-aos-duration="600">
+                <h2>About Me</h2>
+                <p style="text-align: justify;">Hi, I'm Haopeng Deng, an undergraduate at Guangzhou Maritime University, passionate about Intelligent Transportation Systems. My research focuses on optimizing urban traffic flow, with a particular interest in how Connected and Autonomous Vehicles (CAVs) can reshape mobility. I’m currently working on models to integrate human-driven and autonomous vehicles, aiming to improve city traffic efficiency and safety with a human-centric approach. My goal is to leverage technology and data to create smarter, more resilient transportation systems for the future. I'm looking for MPhil/PhD opportunities starting in Fall 2026.
+</p>
             </section>
 
-            <section class="section-block">
-                <h2>Research Interests</h2>
-                <ul>
-                    <li>**研究方向一：** 详细描述该方向的研究内容和你的贡献。</li>
-                    <li>**研究方向二：** 详细描述该方向的研究内容和你的贡献。</li>
-                    <li>**研究方向三：** 详细描述该方向的研究内容和你的贡献。</li>
-                    </ul>
-            </section>
-
-            <section class="section-block">
-                <h2>Publications</h2>
-                <ol>
-                    <li>
-                        <strong>论文标题一</strong>. 作者列表. 期刊/会议名称, 年份.
-                        <br><a href="#" target="_blank">[PDF]</a> <a href="#" target="_blank">[项目页]</a> <a href="#" target="_blank">[DOI]</a>
-                    </li>
-                    <li>
-                        <strong>论文标题二</strong>. 作者列表. 期刊/会议名称, 年份.
-                        <br><a href="#" target="_blank">[PDF]</a> <a href="#" target="_blank">[项目页]</a> <a href="#" target="_blank">[DOI]</a>
-                    </li>
-                    </ol>
-            </section>
-
-            </main>
+            <!-- Interests & Skills -->
+<section class="section-block" id="interests-skills" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+    <h2>Interests & Skills</h2>
+    <div class="image-container">
+        <div class="image-column">
+            <h3>Research Interests</h3>
+            <img src="path_to_interest_wordcloud1.jpg" alt="Research Interests Word Cloud" class="wordcloud-image">
+        </div>
+        <div class="image-column">
+            <h3>Skills</h3>
+            <img src="path_to_skill_wordcloud2.jpg" alt="Skills Word Cloud" class="wordcloud-image">
+        </div>
     </div>
+</section>
+
+            <!-- Publications -->
+<section class="section-block" id="publications" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+    <h2>Publications</h2>
+    <h3>Accepted or Published</h3>
+    <ol>
+        <li>
+            <strong>Deng, H.</strong>, Zheng, F., Ma, K., & Xia, X. (2025). Adaptive Truncated Schatten Norm for Traffic Data Imputation with Complex Missing Patterns. <em>The 25th COTA International Conference of Transportation Professionals</em>, Guangzhou, China. <a href="https://doi.org/10.21203/rs.3.rs-6804022/v1" target="_blank">[DOI]</a>
+        </li>
+        <li>
+            <strong>Deng, H.</strong>, Zheng, F., & Zhan, L. (2024). Application of Markov Processes in Traffic Signal Control. <em>International Core Journal of Engineering</em>. <a href="https://doi.org/10.6919/ICJE.202411_10(11).0015" target="_blank">[DOI]</a>
+        </li>
+        <li>
+            Wang, Q., <strong>Deng, H.</strong>, Deng, H., Cai, J., et al. (2025). Research on the Incentive Mechanism of a Comprehensive Carbon Pricing System for Carbon Emission Reduction and Carbon Sink Enhancement. <em>Journal of Guangzhou Maritime University</em>. <a href="https://kns.cnki.net/kcms2/article/abstract?v=Qc2UN8NgW0uui7W4PVsAM4Hkwo167oBRKKMIYBPQUKMjbOaYKUAaKtPTjEjtqRoZB2fEPj7xguA_dXpwv9NVb5nYuxfN4YsKQyW4yYnaOboin2QMLoSXNs2JBLKySgZbjbZ2EDUHNdnRPs8pnfA4jMHrzTCFVY1rN36Pc5inBFdezCLo8h1SguB3ZkrgaEyb&uniplatform=NZKPT" target="_blank">[CNKI]</a>
+        </li>
+        <li>
+            Wang, Y., Gao, Z., & <strong>Deng, H.</strong> (2024). An Analytical Exploration of Limits and Infinitesimals. <em>World Scientific Research Journal</em>. Corresponding Author. <a href="https://doi.org/10.6911/WSRJ.202409_10(9).0003" target="_blank">[DOI]</a>
+        </li>
+        <li>
+            Wang, Y., Zhang, H., Zhou, Y., <strong>Deng, H.</strong>, et al. (2025). Exploring the 2-Part of Class Groups in Quadratic Fields: Perspectives on the Cohen–Lenstra Conjectures. <em>Mathematics</em>. <a href="https://doi.org/10.3390/math13010051" target="_blank">[DOI]</a>
+        </li>
+    </ol>
+
+    <h3>Manuscripts</h3>
+    <ol>
+        <li>
+            Wang, Y., <strong>Deng, H.</strong>, Luo, Z., Li, L. Approximate Sparse Stochastic Control for Time-Varying Systems with Control-Dependent Diffusion. <a href="https://doi.org/10.21203/rs.3.rs-6809362/v1" target="_blank">[Preprint]</a>
+        </li>
+        <li>
+            Wang, Y., Li, L., <strong>Deng, H.</strong>, et al. (2025). Sparse Stochastic Optimal Control under Control-Dependent Diffusion and Time-Varying Dynamics. <a href="https://doi.org/10.21203/rs.3.rs-6612631/v1" target="_blank">[Preprint]</a>
+        </li>
+    </ol>
+</section>
+
+            <!-- Projects -->
+<section class="section-block" id="research-experiences" data-aos="fade-up" data-aos-duration="600">
+    <h2>Research Experiences</h2>
+
+    <div class="experience" style="display: flex; flex-direction: row;">
+        <div style="flex: 7; padding-right: 20px;">
+            <h3>Guangdong Provincial Special Fund for Science and Technology Innovation Strategy (07/2024-present)</h3>
+            <p><strong>Title: </strong>Cooperative Game-Based Network Traffic Assignment Mechanisms for Enhancing Urban Transportation Efficiency</p>
+            <p style="text-align: justify;">As the Project Leader, I am leading a project to enhance urban transportation efficiency through game-based network traffic assignment mechanisms. I has developed a unified VI-based Dynamic Traffic Assignment (DTA) model, capturing a continuous spectrum of user equilibrium  (UE) and system optimum (SO) across two time scales. My work involved analyzing the nonlinear dynamics within a 4D control parameter space of mixed connected and human-driven vehicle networks, uncovering key bifurcation patterns and chaotic attractors. Additionally, I authored a systematic review of mixed-traffic DTA models, synthesizing insights from over 100 studies on equilibrium evolution, algorithms, and emerging trends. I also oversee task delegation, milestone tracking, and mentor junior researchers to ensure timely progress.</p>
+        </div>
+        <div style="flex: 3;">
+            <img src="images/project1.jpg" alt="Project 1 Image" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div class="experience" style="display: flex; flex-direction: row-reverse;">
+        <div style="flex: 7; padding-left: 20px;">
+            <h3>Guangdong Provincial College Student Innovation and Entrepreneurship Training Program (11/2024-present)</h3>
+            <p><strong>Title: </strong>Intelligent Recognition of Urban Traffic Equilibrium States under Air-Ground Collaborative Monitoring</p>
+            <p style="text-align: justify;">As a core member, I contributed to developing an intelligent system for recognizing urban traffic equilibrium states, integrating data from roadside sensors, UAVs, and probe vehicles. My team aims to construct high-dimensional traffic flow tensors and explore various data loss structures, including element-wise, fiber-wise, and mixed loss, to improve data recovery algorithms. In particular, I developed an adaptive truncated Schatten norm-based model (LRTC-ATSN) that successfully completed traffic datasets with missing patterns, achieving significant improvements in accuracy and performance. Additionally, I facilitated a partnership between academia and industry for traffic survey equipment procurement and guided junior students in fieldwork to gather data for analyzing traffic flow  equilibrium states.</p>
+        </div>
+        <div style="flex: 3;">
+            <img src="images/project2.jpg" alt="Project 2 Image" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+
+    <div class="experience" style="display: flex; flex-direction: row;">
+        <div style="flex: 7; padding-right: 20px;">
+            <h3>The Hundred Thousand Talent Plan (07/2024)</h3>
+            <p><strong>Title: </strong>Investigation and Research on Traffic Safety and Planning in Kaiping City</p>
+            <p style="text-align: justify;">I led a team focused on traffic safety and planning in Kaiping City. We worked closely with the Municipal Transportation Department, analyzing traffic accident and violation data to identify accident hotspots and hazard types. My team conducted on-site surveys, interviews, and drone photography to gather data on traffic flow, vehicle management, pedestrian movement, and infrastructure. I applied SPSS and LLM tools to analyze the survey and interview data, uncovering key issues and proposing actionable solutions that contributed significantly to the city's traffic safety and planning efforts. I also authored two technical reports: one that used Structural Equation Modeling to explore the relationship between traffic safety behavior and attitudes, and another assessing Kaiping's traffic governance using Grey Relational Analysis and Fuzzy Evaluation. The findings were eventually adopted by the Municipal Transportation Bureau.</p>
+        </div>
+        <div style="flex: 3;">
+            <img src="images/project3.jpg" alt="Project 3 Image" style="width: 100%; border-radius: 8px;">
+        </div>
+    </div>
+</section>
+
+            <!-- Awards and Honors -->
+<section class="section-block" id="awards-honors" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+    <h2>Awards and Honors</h2>
+    <ul>
+        <li>Meritorious Winner (M Award), Interdisciplinary Contest in Modeling (ICM), COMAP <span style="float: right;">2025</span></li>
+        <li>Third Prize, China Undergraduate Mathematical Contest in Modeling, Guangdong Division <span style="float: right;">2024</span></li>
+        <li>Second Prize, 19th College Students Transportation Science and Technology Competition <span style="float: right;">2024</span></li>
+        <li>Third Prize, 18th “Challenge Cup” College Students' Extracurricular Academic Science and Technology Works Competition, Guangdong Division <span style="float: right;">2024</span></li>
+        <li>Merit Scholarship (Third Class), Guangzhou Maritime University <span style="float: right;">2023</span></li>
+    </ul>
+</section>
+
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 500, easing: 'ease-out' });
+    </script>
 
 </body>
 </html>
