@@ -3,16 +3,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+    background-color: #f0f2f5; /* 浅灰色背景 */
     color: #333;
     line-height: 1.7;
-
-    /* 添加背景图片 */
-    background-image: url('images/bg1'); /* 替换为您的图片路径 */
-    background-size: cover; /* 使图片覆盖整个背景区域 */
-    background-position: center center; /* 图片居中显示 */
-    background-repeat: no-repeat; /* 不重复平铺图片 */
-    background-attachment: fixed; /* 图片随页面滚动而固定，不滚动 */
-    /* background-color: #f0f2f5; /* 可选：在图片加载失败或透明时显示的备用颜色 */ */
 }
 
 a {
