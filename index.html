@@ -3,44 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的主页 - CV</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 40px;
-            text-align: center;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        .pdf-viewer-container {
-            margin: 0 auto; /* 居中 */
-            max-width: 900px; /* 控制最大宽度 */
-            height: 800px; /* 控制高度 */
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none; /* 移除 iframe 边框 */
-        }
-    </style>
+    <title>你的名字 - 个人主页</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
 
-    <h1>我的个人简历</h1>
-    <p>您可以在下方直接预览我的最新简历。</p>
+    <div class="container">
+        <aside class="left-column">
+            <div class="profile-section">
+                <img src="images/your_profile_photo.jpg" alt="你的个人照片" class="profile-photo">
+                <h2>你的名字</h2>
+                <p class="title">你的职位 / 研究方向</p>
+                </div>
 
-    <div class="pdf-viewer-container">
-        <iframe src="https://docs.google.com/viewer?url=https://qianyhp.github.io/assets/cv.pdf&embedded=true"></iframe>
+            <nav class="contact-info">
+                <ul>
+                    <li><i class="fas fa-map-marker-alt"></i> 你的地点 (城市, 国家)</li>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:your.email@example.com">你的邮箱</a></li>
+                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a></li>
+                    <li><i class="fab fa-github"></i> <a href="https://github.com/qianyhp" target="_blank">GitHub</a></li>
+                    <li><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=YOUR_ID" target="_blank">Google Scholar</a></li>
+                    </ul>
+            </nav>
+        </aside>
+
+        <main class="right-column">
+            <section class="section-block">
+                <h2>About me</h2>
+                <p>我是 [你的名字]，目前在 [你的大学/机构] 从事 [你的研究方向] 的研究工作。我的研究兴趣包括 [兴趣1]、[兴趣2] 和 [兴趣3]。我致力于 [你的研究目标或贡献]。</p>
+                <p>曾就读于 [你的本科/硕士院校]，获得 [学位]。我的研究经验包括 [简要介绍一些项目或经历]。我期待与您在学术上进行交流与合作。</p>
+            </section>
+
+            <section class="section-block">
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>**研究方向一：** 详细描述该方向的研究内容和你的贡献。</li>
+                    <li>**研究方向二：** 详细描述该方向的研究内容和你的贡献。</li>
+                    <li>**研究方向三：** 详细描述该方向的研究内容和你的贡献。</li>
+                    </ul>
+            </section>
+
+            <section class="section-block">
+                <h2>Publications</h2>
+                <ol>
+                    <li>
+                        <strong>论文标题一</strong>. 作者列表. 期刊/会议名称, 年份.
+                        <br><a href="#" target="_blank">[PDF]</a> <a href="#" target="_blank">[项目页]</a> <a href="#" target="_blank">[DOI]</a>
+                    </li>
+                    <li>
+                        <strong>论文标题二</strong>. 作者列表. 期刊/会议名称, 年份.
+                        <br><a href="#" target="_blank">[PDF]</a> <a href="#" target="_blank">[项目页]</a> <a href="#" target="_blank">[DOI]</a>
+                    </li>
+                    </ol>
+            </section>
+
+            </main>
     </div>
-
-    <p>如果您需要下载，请点击这里：<a href="https://qianyhp.github.io/assets/your_cv.pdf" target="_blank">下载我的CV</a></p>
-    <p>或者，您也可以点击<a href="mailto:your.email@example.com">联系我</a></p>
 
 </body>
 </html>
