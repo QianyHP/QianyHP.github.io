@@ -1,76 +1,156 @@
-/* style.css */
-
 /* 通用样式和重置 */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif; /* 常用字体 */
     margin: 0;
     padding: 0;
+    font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
     background-color: #f0f2f5; /* 浅灰色背景 */
     color: #333;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 a {
-    color: #007bff; /* 链接蓝色 */
-    text-decoration: none; /* 移除下划线 */
+    color: #1E3A8A; /* 链接蓝色 */
+    text-decoration: none;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 a:hover {
-    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+    text-decoration: underline;
+    color: #3B82F6; /* 悬停时颜色稍微加深 */
 }
 
 ul {
-    list-style: none; /* 移除无序列表的默认项目符号 */
+    list-style: none;
     padding: 0;
 }
 
 ol {
-    padding-left: 20px; /* 有序列表左边距 */
+    padding-left: 20px;
 }
 
-/* 容器：用于包裹两列 */
-.container {
-    display: flex; /* 使用 Flexbox 布局 */
-    max-width: 1200px; /* 容器最大宽度 */
-    margin: 30px auto; /* 上下30px，左右自动居中 */
-    background-color: #fff; /* 白色背景 */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
-    border-radius: 8px; /* 圆角边框 */
-    overflow: hidden; /* 确保内容不会溢出圆角 */
+/* 页眉样式 */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #333;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
+.site-title a {
+    color: #555;
+    text-decoration: none;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav li {
+    margin-left: 30px;
+}
+
+.main-nav a {
+    color: #555;
+    font-weight: 500;
+    font-size: 1.1em;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    text-decoration: none;
+    color: #3B82F6;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #3B82F6;
+    transition: width .3s ease-in-out;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
 }
 
 /* 左边栏样式 */
 .left-column {
-    flex: 0 0 280px; /* 固定宽度 280px，不伸缩 */
-    background-color: #f8f9fa; /* 浅色背景 */
-    padding: 30px 20px;
-    border-right: 1px solid #eee; /* 右边框 */
+    flex: 0 0 280px; 
+    background-color: #f8f9fa; 
+    padding: 30px 20px; 
+    border-right: 1px solid #eee; 
     text-align: center;
-    position: sticky; /* 使左边栏在滚动时保持在顶部 */
-    top: 0; /* 距离顶部0px */
-    height: 100vh; /* 撑满视口高度 */
-    overflow-y: auto; /* 如果内容溢出则滚动 */
+    overflow-y: auto;
+    position: sticky; 
+    top: 20px; 
+    z-index: 10; 
+}
+
+/* 主要容器 */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 30px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 100vh; 
 }
 
 .profile-photo {
     width: 150px;
     height: 150px;
-    border-radius: 50%; /* 圆形图片 */
-    object-fit: cover; /* 确保图片不变形填充 */
+    border-radius: 50%;
+    object-fit: cover;
     margin-bottom: 15px;
-    border: 3px solid #007bff; /* 边框 */
+    border: 2px solid #3B82F6;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 .left-column h2 {
     font-size: 1.8em;
-    color: #2c3e50;
+    color: #4B5563;
     margin-bottom: 5px;
 }
 
 .left-column .title {
     font-size: 1em;
-    color: #666;
+    color: #555;
     margin-bottom: 25px;
 }
 
@@ -82,45 +162,44 @@ ol {
     margin-bottom: 15px;
     font-size: 0.95em;
     color: #555;
-    display: flex; /* 让图标和文字水平对齐 */
+    display: flex;
     align-items: center;
-    justify-content: flex-start; /* 左对齐 */
-    text-align: left; /* 文本左对齐 */
+    justify-content: flex-start;
+    text-align: left;
 }
 
 .contact-info li i {
-    margin-right: 10px; /* 图标和文字之间的间距 */
-    color: #007bff; /* 图标颜色 */
-    min-width: 20px; /* 确保图标对齐 */
+    margin-right: 10px;
+    color: #6B7280;
+    min-width: 20px;
     text-align: center;
 }
 
-
 /* 右边栏样式 */
 .right-column {
-    flex: 1; /* 占据剩余所有空间 */
+    flex: 1;
     padding: 30px;
-    overflow-y: auto; /* 如果内容溢出则滚动 */
+    overflow-y: auto;
 }
 
 .section-block {
-    margin-bottom: 40px; /* 各个区块之间的间距 */
+    margin-bottom: 40px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #eee; /* 区块底部细线 */
+    border-bottom: 1px solid #eee;
 }
 
 .section-block:last-child {
-    border-bottom: none; /* 最后一个区块无底部线 */
+    border-bottom: none;
     margin-bottom: 0;
 }
 
 .right-column h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     color: #2c3e50;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #007bff; /* 标题下划线 */
-    padding-bottom: 10px;
-    display: inline-block; /* 让下划线只在文字下方 */
+    margin-bottom: 5px;
+    border-bottom: 2px solid #3B82F6;
+    padding-bottom: 5px;
+    display: inline-block;
 }
 
 .right-column p,
@@ -134,23 +213,50 @@ ol {
     margin-bottom: 15px;
 }
 
-/* 移动端响应式调整 */
+/* 响应式调整 */
 @media (max-width: 768px) {
+    .main-header {
+        padding: 10px 0;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .site-title {
+        margin-bottom: 10px;
+    }
+    .site-title a {
+        color: #333;
+    }
+    .main-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav li {
+        margin: 5px 15px;
+    }
+    .main-nav a {
+        color: #555;
+    }
+
     .container {
-        flex-direction: column; /* 垂直堆叠 */
-        margin: 0; /* 移除外边距 */
-        border-radius: 0; /* 移除圆角 */
-        box-shadow: none; /* 移除阴影 */
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+        box-shadow: none;
+        min-height: auto;
     }
 
     .left-column {
-        flex: none; /* 取消固定宽度 */
-        width: 100%; /* 宽度撑满 */
+        flex: none;
+        width: 100%;
         padding: 20px;
         border-right: none;
-        border-bottom: 1px solid #eee; /* 底部边框 */
-        position: static; /* 取消 sticky 定位 */
-        height: auto; /* 高度自适应 */
+        border-bottom: 1px solid #eee;
+        position: static;
+        height: auto;
     }
 
     .profile-photo {
@@ -163,7 +269,7 @@ ol {
     }
 
     .contact-info li {
-        justify-content: center; /* 居中对齐 */
+        justify-content: center;
     }
 
     .right-column {
@@ -173,4 +279,32 @@ ol {
     .right-column h2 {
         font-size: 1.8em;
     }
+}
+
+/* Container to hold both images */
+.image-container {
+    display: flex; /* Use flexbox to display images side by side */
+    justify-content: space-between; /* Ensure images are spaced out */
+    gap: 20px; /* Optional: adds space between columns */
+    margin-top: 20px; /* Adds spacing above the image container */
+}
+
+/* Style for each image column */
+.image-column {
+    flex: 1; /* Makes each column take up equal space */
+    text-align: center; /* Centers the title and image */
+}
+
+/* Style for the word cloud images */
+.wordcloud-image {
+    width: 100%; /* Ensures images take up full width of their container */
+    max-width: 500px; /* Sets a max width to prevent images from becoming too large */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners to the images */
+}
+
+/* Title for each word cloud */
+h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px; /* Adds space below the title */
 }
