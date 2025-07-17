@@ -12,7 +12,7 @@ body {
     background-position: center center; /* 图片居中显示 */
     background-repeat: no-repeat; /* 不重复平铺图片 */
     background-attachment: fixed; /* 图片随页面滚动而固定，不滚动 */
-    background-color: #f0f2f5; /* 可选：在图片加载失败或透明时显示的备用颜色 */ */
+    /* background-color: #f0f2f5; /* 可选：在图片加载失败或透明时显示的备用颜色 */ */
 }
 
 a {
