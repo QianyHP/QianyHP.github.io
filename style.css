@@ -7,7 +7,7 @@ body {
     line-height: 1.7;
 
     /* 添加背景图片 */
-    background-image: url('path/to/your/image.jpg'); /* 替换为您的图片路径 */
+    background-image: url('images/bg1'); /* 替换为您的图片路径 */
     background-size: cover; /* 使图片覆盖整个背景区域 */
     background-position: center center; /* 图片居中显示 */
     background-repeat: no-repeat; /* 不重复平铺图片 */
