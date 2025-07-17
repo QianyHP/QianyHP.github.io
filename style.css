@@ -1,1 +1,176 @@
+/* style.css */
 
+/* 通用样式和重置 */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif; /* 常用字体 */
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* 浅灰色背景 */
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: #007bff; /* 链接蓝色 */
+    text-decoration: none; /* 移除下划线 */
+}
+
+a:hover {
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+ul {
+    list-style: none; /* 移除无序列表的默认项目符号 */
+    padding: 0;
+}
+
+ol {
+    padding-left: 20px; /* 有序列表左边距 */
+}
+
+/* 容器：用于包裹两列 */
+.container {
+    display: flex; /* 使用 Flexbox 布局 */
+    max-width: 1200px; /* 容器最大宽度 */
+    margin: 30px auto; /* 上下30px，左右自动居中 */
+    background-color: #fff; /* 白色背景 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* 轻微阴影 */
+    border-radius: 8px; /* 圆角边框 */
+    overflow: hidden; /* 确保内容不会溢出圆角 */
+}
+
+/* 左边栏样式 */
+.left-column {
+    flex: 0 0 280px; /* 固定宽度 280px，不伸缩 */
+    background-color: #f8f9fa; /* 浅色背景 */
+    padding: 30px 20px;
+    border-right: 1px solid #eee; /* 右边框 */
+    text-align: center;
+    position: sticky; /* 使左边栏在滚动时保持在顶部 */
+    top: 0; /* 距离顶部0px */
+    height: 100vh; /* 撑满视口高度 */
+    overflow-y: auto; /* 如果内容溢出则滚动 */
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* 圆形图片 */
+    object-fit: cover; /* 确保图片不变形填充 */
+    margin-bottom: 15px;
+    border: 3px solid #007bff; /* 边框 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-column h2 {
+    font-size: 1.8em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.left-column .title {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.contact-info ul {
+    margin-top: 20px;
+}
+
+.contact-info li {
+    margin-bottom: 15px;
+    font-size: 0.95em;
+    color: #555;
+    display: flex; /* 让图标和文字水平对齐 */
+    align-items: center;
+    justify-content: flex-start; /* 左对齐 */
+    text-align: left; /* 文本左对齐 */
+}
+
+.contact-info li i {
+    margin-right: 10px; /* 图标和文字之间的间距 */
+    color: #007bff; /* 图标颜色 */
+    min-width: 20px; /* 确保图标对齐 */
+    text-align: center;
+}
+
+
+/* 右边栏样式 */
+.right-column {
+    flex: 1; /* 占据剩余所有空间 */
+    padding: 30px;
+    overflow-y: auto; /* 如果内容溢出则滚动 */
+}
+
+.section-block {
+    margin-bottom: 40px; /* 各个区块之间的间距 */
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee; /* 区块底部细线 */
+}
+
+.section-block:last-child {
+    border-bottom: none; /* 最后一个区块无底部线 */
+    margin-bottom: 0;
+}
+
+.right-column h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #007bff; /* 标题下划线 */
+    padding-bottom: 10px;
+    display: inline-block; /* 让下划线只在文字下方 */
+}
+
+.right-column p,
+.right-column li {
+    font-size: 1em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.right-column ul li {
+    margin-bottom: 15px;
+}
+
+/* 移动端响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* 垂直堆叠 */
+        margin: 0; /* 移除外边距 */
+        border-radius: 0; /* 移除圆角 */
+        box-shadow: none; /* 移除阴影 */
+    }
+
+    .left-column {
+        flex: none; /* 取消固定宽度 */
+        width: 100%; /* 宽度撑满 */
+        padding: 20px;
+        border-right: none;
+        border-bottom: 1px solid #eee; /* 底部边框 */
+        position: static; /* 取消 sticky 定位 */
+        height: auto; /* 高度自适应 */
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .left-column h2 {
+        font-size: 1.5em;
+    }
+
+    .contact-info li {
+        justify-content: center; /* 居中对齐 */
+    }
+
+    .right-column {
+        padding: 20px;
+    }
+
+    .right-column h2 {
+        font-size: 1.8em;
+    }
+}
