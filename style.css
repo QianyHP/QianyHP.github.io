@@ -254,6 +254,7 @@ ol {
         border-right: none;
         border-bottom: 1px solid #eee;
         position: static;
+        height: auto;
     }
 
     .profile-photo {
