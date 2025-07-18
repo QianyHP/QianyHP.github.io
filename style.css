@@ -112,13 +112,13 @@ ol {
     text-align: center;
     overflow-y: auto;
     position: sticky; 
-    top: 20px; 
+    top: 30px; 
     z-index: 10; 
     /* 让左侧栏在Flex容器中垂直拉伸，以匹配右侧栏的高度 */
     align-self: stretch; 
     /* 限制左侧栏的最大高度，防止它拉伸超出屏幕高度，同时保持粘性 */
     /* calc(100vh - 60px) 是一个示例值，您可以根据页眉、页脚及顶部偏移量进行调整 */
-    max-height: calc(100vh - 60px); 
+    max-height: calc(100vh - 40px); 
 }
 
 /* 主要容器 */
@@ -129,8 +129,6 @@ ol {
     background-color: #fff;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    /* 确保 flex 项目从顶部对齐，但不自动拉伸 */
-    align-items: flex-start; 
 }
 
 .profile-photo {
