@@ -216,7 +216,7 @@ ol {
 /* 响应式调整 */
 @media (max-width: 768px) {
     .main-header {
-        padding: 10px 10;
+        padding: 10px 10px;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
     }
@@ -243,7 +243,7 @@ ol {
 
     .container {
         flex-direction: column;
-        margin: 0 10px;
+        margin: 0 15px;
         border-radius: 0;
         box-shadow: none;
         min-height: auto;
@@ -253,15 +253,15 @@ ol {
         flex: none;
         width: 100%;
         padding: 20px;
-        border-right: none;
+        /*border-right: none;*/
         border-bottom: 1px solid #eee;
         position: static;
         height: auto;
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 
     .left-column h2 {
@@ -277,7 +277,7 @@ ol {
     }
 
     .right-column h2 {
-        font-size: 1.8em;
+        font-size: 1.5em;
     }
 }
 
