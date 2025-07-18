@@ -177,6 +177,7 @@ ol {
 .right-column {
     flex: 1;
     padding: 30px;
+    min-width: 0; 
 }
 
 .section-block {
@@ -340,4 +341,56 @@ h3 {
 /* 针对每个 section 设置不同的延迟效果 */
 .section-block:nth-child(4) {
     animation-delay: 0.8s;
+}
+
+/* 图片水平滚动容器样式 */
+.project-images-scroll-container {
+    display: flex; /* 让图片水平排列 */
+    overflow-x: auto; /* 允许内容水平溢出并显示滚动条 */
+    -webkit-overflow-scrolling: touch; /* 针对 iOS 设备优化滚动体验 */
+    white-space: nowrap; /* 防止图片换行 */
+    padding-bottom: 10px; /* 为滚动条留出一些空间，避免遮挡图片底部 */
+    gap: 15px; /* 图片之间的间距 */
+    margin-top: 10px; /* 容器上方的外边距 */
+
+    /* 样式化滚动条 (针对 Firefox) */
+    scrollbar-width: thin; /* “薄”的滚动条 */
+    scrollbar-color: #ccc #f1f1f1; /* 滚动条滑块颜色 和 轨道颜色 */
+}
+
+/* 样式化滚动条 (针对 Webkit 浏览器，如 Chrome, Safari) */
+.project-images-scroll-container::-webkit-scrollbar {
+    height: 8px; /* 水平滚动条的高度 */
+}
+
+.project-images-scroll-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 滚动条轨道的背景色 */
+    border-radius: 10px; /* 轨道圆角 */
+}
+
+.project-images-scroll-container::-webkit-scrollbar-thumb {
+    background: #ccc; /* 滚动条滑块的颜色 */
+    border-radius: 10px; /* 滑块圆角 */
+}
+
+.project-images-scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #888; /* 鼠标悬停时滑块的颜色 */
+}
+
+/* 滚动容器内单个图片样式 */
+.project-images-scroll-container img {
+    flex-shrink: 0; /* 阻止图片缩小 */
+    width: 280px; /* 每张图片的固定宽度，您可以根据需求调整 */
+    height: 200px; /* 每张图片的固定高度，确保一致性 */
+    object-fit: cover; /* 确保图片覆盖其区域，可能会裁剪 */
+    border-radius: 8px; /* 图片圆角 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影，可选 */
+}
+
+/* 响应式调整：在小屏幕上，图片可以更小一些，或者容器行为变化 */
+@media (max-width: 768px) {
+    .project-images-scroll-container img {
+        width: 180px; /* 移动设备上图片宽度 */
+        height: 120px; /* 移动设备上图片高度 */
+    }
 }
