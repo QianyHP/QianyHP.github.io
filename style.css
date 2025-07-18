@@ -380,17 +380,26 @@ h3 {
 /* 滚动容器内单个图片样式 */
 .project-images-scroll-container img {
     flex-shrink: 0; /* 阻止图片缩小 */
-    width: 280px; /* 每张图片的固定宽度，您可以根据需求调整 */
-    height: 200px; /* 每张图片的固定高度，确保一致性 */
-    object-fit: cover; /* 确保图片覆盖其区域，可能会裁剪 */
+    
+    /* 移除之前固定的 width 和 height */
+    /* width: 280px; */
+    /* height: 200px; */
+
+    /* 新的自适应尺寸和避免裁剪的设置 */
+    max-height: 200px; /* 设定一个最大高度，确保所有图片在同一水平线上，您可以根据需要调整此值 */
+    width: auto; /* 宽度自适应，保持图片原始比例 */
+    object-fit: contain; /* 关键：确保整个图片内容可见，不会被裁剪。如果图片与容器的宽高比不符，可能会出现空白区域。 */
+    /* 如果您希望图片拉伸填满，但可能变形，可以使用 object-fit: fill; */
+    /* 如果您希望图片填充但不裁剪，并保持比例，但可能会有部分内容超出容器，那就不设置 object-fit */
+
     border-radius: 8px; /* 图片圆角 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影，可选 */
 }
 
-/* 响应式调整：在小屏幕上，图片可以更小一些，或者容器行为变化 */
+/* 响应式调整：在小屏幕上，图片可以有不同的最大高度 */
 @media (max-width: 768px) {
     .project-images-scroll-container img {
-        width: 180px; /* 移动设备上图片宽度 */
-        height: 120px; /* 移动设备上图片高度 */
+        max-height: 150px; /* 移动设备上图片的最大高度，根据需要调整 */
+        width: auto; /* 宽度自适应 */
     }
 }
