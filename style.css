@@ -112,12 +112,12 @@ ol {
     text-align: center;
     overflow-y: auto;
     position: sticky; 
-    top: 30px; 
+    top: 40px; 
     z-index: 10; 
     /* 让左侧栏在Flex容器中垂直拉伸，以匹配右侧栏的高度 */
     align-self: stretch; 
     /* 限制左侧栏的最大高度，防止它拉伸超出屏幕高度，同时保持粘性 */
-    max-height: calc(100vh - 50px); 
+    max-height: calc(100vh - 45px); 
 }
 
 /* 主要容器 */
