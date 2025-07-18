@@ -216,7 +216,7 @@ ol {
 /* 响应式调整 */
 @media (max-width: 768px) {
     .main-header {
-        padding: 0px 10px;
+        padding: 10px 0;
         backdrop-filter: blur(5px);
         -webkit-backdrop-filter: blur(5px);
     }
@@ -243,7 +243,7 @@ ol {
 
     .container {
         flex-direction: column;
-        margin: 0 15px;
+        margin: 0 18px;
         border-radius: 0;
         box-shadow: none;
         min-height: auto;
@@ -251,9 +251,9 @@ ol {
 
     .left-column {
         flex: none;
-        width: 100%;
+        width: auto;
         padding: 20px;
-        /*border-right: none;*/
+        border-right: none;
         border-bottom: 1px solid #eee;
         position: static;
         height: auto;
