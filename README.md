@@ -32,8 +32,8 @@ Hi, I'm **Haopeng Deng**, and I created this clean, modern, and responsive acade
 │
 ├── 📁 images/ # Image assets
 │ ├── 👤 profile.jpg # Profile photo
-│ └── 🌟 favicon.png # Website favicon
-│ ├── 🖼️ project1_fig2.svg # Lllustration
+│ ├── 🌟 favicon.png # Website favicon
+│ └── 🖼️ project1_fig2.svg # Lllustration
 ```
 
 ## 🚀 How to Use
