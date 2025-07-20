@@ -1,43 +1,44 @@
-# 🧑‍🎓 个人主页
+# 🧑‍🎓 Personal Homepage
 
 ![HTML5](https://img.shields.io/badge/HTML5-%23E34F26.svg?style=flat&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-%231572B6.svg?style=flat&logo=css3&logoColor=white)
 ![GitHub Pages](https://img.shields.io/badge/Deployed-GitHub%20Pages-blue?logo=github)
 
-这是Haopeng Deng研发的一个简洁、现代且响应式的个人学术主页项目，旨在高效展示个人履历、研究成果及作品集。
-📎 **[查看实时演示](https://qianyhp.github.io/)**  
+Hi, I'm **Haopeng Deng**, and I created this clean, modern, and responsive academic homepage to present my resume, research achievements, and personal portfolio in a clear and efficient way.
+📎 **[View Live Demo](https://qianyhp.github.io/)**  
 
-## ✨ 主要特点
+## ✨ Features
 
-- 🧱 **清晰结构**：首页采用桌面双栏、移动端单栏的响应式布局，内容一目了然。  
-- 📌 **粘性导航**：顶部页眉和桌面端左侧边栏（包含个人信息和联系方式）采用粘性定位，确保关键信息随时可见。  
-- 🎨 **视觉优化**：背景图片、平滑的 CSS 动画效果，以及图片滚动容器，提升用户体验。  
-- 🛠️ **易于定制**：基于纯 HTML、CSS 构建，结构清晰，方便二次开发与内容更新。
+- 🧱 **Clear Layout**: The homepage uses a responsive design with a two-column layout on desktop and a single-column layout on mobile, making content easy to scan.  
+- 📌 **Sticky Navigation**: The top header and left sidebar (on desktop), which include personal info and contact details, are sticky to stay always visible.  
+- 🎨 **Visual Enhancements**: Background images, smooth CSS animations, and image scroll containers improve the user experience.  
+- 🛠️ **Easy Customization**: Built with plain HTML and CSS, with clean structure for easy maintenance and secondary development.
 
-## 🚀 如何使用
+## 🚀 How to Use
 
-1. 📥 克隆本仓库到本地。  
-2. 📄 将您的中英文简历、作品集以及你想呈现的任何 PDF 文件放入 `assets/` 文件夹（例如 `assets/CV-Deng Haopeng.pdf`, `assets/portfolio-Deng Haopeng.pdf`）。  
-3. 🌐 在浏览器中打开 `index.html` 或将项目部署到任何静态文件托管服务。
+1. 📥 Clone this repository to your local machine.  
+2. 📄 Place your bilingual CV, portfolio, and any other PDF files you want to display in the `assets/` folder (e.g., `assets/CV-Deng Haopeng.pdf`, `assets/portfolio-Deng Haopeng.pdf`).  
+3. 🌐 Open `index.html` in a browser, or deploy the project to any static file hosting service.
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
-📦 qianyhp.github.io/          
-├── 📄 index.html            
-├── 📄 cv.html                
-├── 📄 portfolio.html         
-├── 🎨 style.css            
+📦 qianyhp.github.io/
+├── 📄 index.html # Homepage entry
+├── 📄 cv.html # Resume page
+├── 📄 portfolio.html # Portfolio page
+├── 🎨 style.css # Stylesheet
 │
-├── 📁 assets/             
-│   ├── 📄 CV.pdf            
-│   └── 📄 portfolio-Deng.pdf # 
+├── 📁 assets/ # PDF documents
+│ ├── 📄 CV.pdf # CV file
+│ └── 📄 portfolio-Deng.pdf # Portfolio PDF
 │
-├── 🖼️ images/             
-│   ├── 👤 profile.jpg      
-│   └── 🌟 favicon.png    
+├── 🖼️ images/ # Image assets
+│ ├── 👤 profile.jpg # Profile photo
+│ └── 🌟 favicon.png # Website favicon
 ```
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提出任何改进建议或问题反馈！
+Feedback and suggestions for improvements are always welcome!!
+
