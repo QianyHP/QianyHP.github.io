@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Haopeng Deng - CV</title>
@@ -12,37 +13,25 @@
             <h1 class="site-title"><a href="index.html">Haopeng Deng</a></h1>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="cv.html">CV</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                </ul>
+                    <li><a href="cv.html">CV</a></li> <li><a href="portfolio.html">Portfolio</a></li> </ul>
             </nav>
         </div>
     </header>
 
     <div class="container cv-page-container">
-        
+
         <div class="cv-readers-wrapper">
             <div class="cv-reader">
                 <h2>English CV</h2>
-                <div class="pdf-embed-container">
-                    <iframe src="assets/en-CV.pdf" width="100%" height="800px" style="border: none;"></iframe>
-                </div>
-                <div class="pdf-mobile-link" style="display: none;">
-                    <a href="assets/en-CV.pdf" target="_blank" class="mobile-pdf-button">English CV</a>
-                </div>
+                <iframe src="assets/en-CV.pdf" width="100%" height="800px" style="border: none;"></iframe>
                 <p class="download-link">
                     <a href="assets/en-CV.pdf" target="_blank" download>Download</a>
                 </p>
             </div>
-            
+
             <div class="cv-reader">
                 <h2>Chinese CV</h2>
-                <div class="pdf-embed-container">
-                    <iframe src="assets/cn-CV.pdf" width="100%" height="800px" style="border: none;"></iframe>
-                </div>
-                <div class="pdf-mobile-link" style="display: none;">
-                    <a href="assets/cn-CV.pdf" target="_blank" class="mobile-pdf-button">Chinese CV</a>
-                </div>
+                <iframe src="assets/cn-CV.pdf" width="100%" height="800px" style="border: none;"></iframe>
                 <p class="download-link">
                     <a href="assets/cn-CV.pdf" target="_blank" download>Download</a>
                 </p>
@@ -50,38 +39,5 @@
         </div>
     </div>
 
-    <script>
-        function handlePdfView() {
-            // 获取所有桌面端嵌入容器和手机端链接容器
-            const desktopEmbeds = document.querySelectorAll('.pdf-embed-container');
-            const mobileLinks = document.querySelectorAll('.pdf-mobile-link');
-            // 设置断点，与您的 CSS 媒体查询保持一致，例如 1024px
-            const breakpoint = 1024; 
-
-            if (window.innerWidth <= breakpoint) {
-                // 如果是手机/平板屏幕宽度
-                desktopEmbeds.forEach(container => {
-                    container.style.display = 'none'; // 隐藏桌面端嵌入
-                });
-                mobileLinks.forEach(link => {
-                    link.style.display = 'block'; // 显示手机端链接
-                });
-            } else {
-                // 如果是桌面屏幕宽度
-                desktopEmbeds.forEach(container => {
-                    container.style.display = 'block'; // 显示桌面端嵌入
-                });
-                mobileLinks.forEach(link => {
-                    link.style.display = 'none'; // 隐藏手机端链接
-                });
-            }
-        }
-
-        // 页面加载时执行一次
-        handlePdfView();
-
-        // 窗口大小改变时（例如旋转手机屏幕）重新执行
-        window.addEventListener('resize', handlePdfView);
-    </script>
-</body>
+    </body>
 </html>
