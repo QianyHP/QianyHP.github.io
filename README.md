@@ -19,12 +19,10 @@ Hi, I'm **Haopeng Deng**, and I created this clean, modern, and responsive acade
 ```
 📦 qianyhp.github.io/ #Root directory
 ├── 📄 index.html # Homepage entry
+├── 📄 cv.html # Resume page
+├── 📄 portfolio.html # Portfolio page
 ├── 🎨 style.css # Stylesheet
 ├── 📜 script.js # Interactive behavior
-│
-├── 📁 pages/ # html documents
-│ ├── 📄 cv.html # Resume page
-│ └── 📄 portfolio.html # Portfolio page
 │
 ├── 📁 assets/ # PDF documents
 │ ├── 📄 CV.pdf # CV file
