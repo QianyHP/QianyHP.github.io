@@ -354,17 +354,17 @@ h3 {
 
 /* 图片水平滚动容器样式 */
 .project-images-scroll-container {
-    display: flex; /* 让图片水平排列 */
-    overflow-x: auto; /* 允许内容水平溢出并显示滚动条 */
+    display: flex; 
+    overflow-x: auto; 
     -webkit-overflow-scrolling: touch; /* 针对 iOS 设备优化滚动体验 */
     white-space: nowrap; /* 防止图片换行 */
-    padding-bottom: 10px; /* 为滚动条留出一些空间，避免遮挡图片底部 */
-    gap: 15px; /* 图片之间的间距 */
-    margin-top: 10px; /* 容器上方的外边距 */
+    padding-bottom: 10px; 
+    gap: 15px;
+    margin-top: 10px; 
 
     /* 样式化滚动条 (针对 Firefox) */
     scrollbar-width: thin; /* “薄”的滚动条 */
-    scrollbar-color: #ccc #f1f1f1; /* 滚动条滑块颜色 和 轨道颜色 */
+    scrollbar-color: #ccc #f1f1f1;
 }
 
 /* 样式化滚动条 (针对 Webkit 浏览器，如 Chrome, Safari) */
@@ -373,34 +373,26 @@ h3 {
 }
 
 .project-images-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1; /* 滚动条轨道的背景色 */
-    border-radius: 10px; /* 轨道圆角 */
+    background: #f1f1f1;
+    border-radius: 10px; 
 }
 
 .project-images-scroll-container::-webkit-scrollbar-thumb {
-    background: #ccc; /* 滚动条滑块的颜色 */
-    border-radius: 10px; /* 滑块圆角 */
+    background: #ccc; 
+    border-radius: 10px; 
 }
 
 .project-images-scroll-container::-webkit-scrollbar-thumb:hover {
-    background: #888; /* 鼠标悬停时滑块的颜色 */
+    background: #888; 
 }
 
 /* 滚动容器内单个图片样式 */
 .project-images-scroll-container img {
     flex-shrink: 0; /* 阻止图片缩小 */
 
-    /* 移除之前固定的 width 和 height */
-    /* width: 280px; */
-    /* height: 200px; */
-
-    /* 新的自适应尺寸和避免裁剪的设置 */
-    max-height: 200px; /* 设定一个最大高度，确保所有图片在同一水平线上，您可以根据需要调整此值 */
-    width: auto; /* 宽度自适应，保持图片原始比例 */
-    object-fit: contain; /* 关键：确保整个图片内容可见，不会被裁剪。如果图片与容器的宽高比不符，可能会出现空白区域。 */
-    /* 如果您希望图片拉伸填满，但可能变形，可以使用 object-fit: fill; */
-    /* 如果您希望图片填充但不裁剪，并保持比例，但可能会有部分内容超出容器，那就不设置 object-fit */
-
+    max-height: 200px; 
+    width: auto; 
+    object-fit: contain; 
     border-radius: 8px; /* 图片圆角 */
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* 添加阴影，可选 */
 }
@@ -415,31 +407,31 @@ h3 {
 
 /* --- CV页面样式 --- */
 .cv-page-container {
-    padding: 40px 40px; /* 增加一些内边距 */
+    padding: 40px 40px; 
     max-width: 1200px;
-    margin: 30px auto; /* 与主页容器保持一致的外边距 */
-    background-color: #fff; /* 白色背景使PDF阅读器更清晰 */
+    margin: 30px auto; 
+    background-color: #fff; 
     border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* 增加更明显的阴影效果 */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
 .cv-readers-wrapper {
     display: flex;
-    gap: 40px; /* 两个PDF阅读器之间的较大间距 */
-    flex-wrap: wrap; /* 允许在小屏幕上换行 */
-    justify-content: center; /* 居中显示阅读器 */
-    align-items: flex-start; /* 顶部对齐，防止高度不同时底部不齐 */
+    gap: 40px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .cv-reader {
-    flex: 1; /* 每个阅读器占据可用空间 */
-    min-width: 526px; /* 设置最小宽度，防止在flex布局下过小 */
+    flex: 1;
+    min-width: 526px;
     background-color: #fcfcfc;
     padding: 25px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 小阴影效果 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
     text-align: center;
-    border: 1px solid #eee; /* 细边框 */
+    border: 1px solid #eee; 
 }
 
 .cv-reader h3 {
@@ -451,15 +443,15 @@ h3 {
 
 .cv-reader iframe {
     width: 100%;
-    min-height: 700px; /* 增加最小高度，确保PDF内容清晰可见 */
+    min-height: 700px;
     border: 1px solid #ddd;
     border-radius: 4px;
-    background-color: #fff; /* iframe背景色 */
+    background-color: #fff; 
 }
 
 .download-link {
     margin-top: 20px;
-    font-size: 1.1em; /* 下载链接字体稍大 */
+    font-size: 1.1em; 
 }
 
 .download-link a {
@@ -475,16 +467,16 @@ h3 {
 }
 
 /* 响应式调整：在小屏幕上，PDF阅读器垂直堆叠 */
-@media (max-width: 1024px) { /* 调整断点以适应常见平板尺寸 */
+@media (max-width: 1024px) { 
     .cv-readers-wrapper {
-        flex-direction: column; /* 垂直堆叠 */
-        align-items: center; /* 垂直堆叠时居中对齐 */
+        flex-direction: column; 
+        align-items: center; 
     }
     .cv-reader {
-        min-width: 90%; /* 在小屏幕上占据更多宽度 */
+        min-width: 90%; 
     }
     .cv-reader iframe {
-        min-height: 500px; /* 小屏幕上iframe高度可以略减 */
+        min-height: 500px; 
     }
 }
 
@@ -499,9 +491,8 @@ h3 {
 }
 
 /* --- 针对单个阅读器可能需要的样式调整 --- */
-/* 仅当 .cv-readers-wrapper 内部只有一个 .cv-reader 元素时生效 */
 .cv-readers-wrapper.single-reader .cv-reader {
     flex: 0 0 auto; /* 取消 flex: 1 的效果 */
-    width: 80%; /* 占据父容器的80%宽度 */
-    min-width: 1145px; /* 防止过窄 */
+    width: 80%; 
+    min-width: 1145px; 
 }
