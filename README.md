@@ -9,10 +9,13 @@ Hi, I'm **Haopeng Deng**, and I created this clean, modern, and responsive acade
 
 ## ✨ Features
 
-- 🧱 **Clear Layout**: The homepage uses a responsive design with a two-column layout on desktop and a single-column layout on mobile, making content easy to scan.  
-- 📌 **Sticky Navigation**: The top header and left sidebar (on desktop), which include personal info and contact details, are sticky to stay always visible.  
-- 🎨 **Visual Enhancements**: Background images, smooth CSS animations, and image scroll containers improve the user experience.  
-- 🛠️ **Easy Customization**: Built with plain HTML and CSS, with clean structure for easy maintenance and secondary development.
+| Icon | Feature              | Description                                                                 |
+|------|----------------------|-----------------------------------------------------------------------------|
+| 🧱   | **Clear Layout**      | Responsive design with two-column desktop layout and single-column mobile layout. |
+| 📌   | **Sticky Navigation** | Header and sidebar remain visible at all times for quick access to personal info. |
+| 🎨   | **Visual Enhancements** | Background images, smooth CSS animations, and scrollable image containers enhance UX. |
+| 🛠️   | **Easy Customization** | Built with plain HTML & CSS. Clean structure allows easy editing and further development. |
+
 
 ## 🚀 How to Use
 
