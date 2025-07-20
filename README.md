@@ -21,7 +21,8 @@
 
 ## 📁 项目结构
 
-📦 项目根目录
+```
+📦 qianyhp.github.io/          # 🌐 项目根目录
 ├── 📄 index.html              # 🌐 首页入口
 ├── 📄 cv.html                 # 🧾 简历页面
 ├── 📄 portfolio.html          # 🎨 作品集页面
@@ -34,6 +35,7 @@
 ├── 🖼️ images/                # 🖼️ 图像资源
 │   ├── 👤 profile.jpg        # 🧑‍💼 头像照片
 │   └── 🌟 favicon.png       # 🔖 网站图标
+```
 
 ## 🧰 技术栈
 
