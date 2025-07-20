@@ -412,3 +412,88 @@ h3 {
         width: auto; /* 宽度自适应 */
     }
 }
+
+/* --- CV页面样式 --- */
+.cv-page-container {
+    padding: 40px 40px; /* 增加一些内边距 */
+    max-width: 1200px;
+    margin: 30px auto; /* 与主页容器保持一致的外边距 */
+    background-color: #fff; /* 白色背景使PDF阅读器更清晰 */
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08); /* 增加更明显的阴影效果 */
+}
+
+.cv-readers-wrapper {
+    display: flex;
+    gap: 40px; /* 两个PDF阅读器之间的较大间距 */
+    flex-wrap: wrap; /* 允许在小屏幕上换行 */
+    justify-content: center; /* 居中显示阅读器 */
+    align-items: flex-start; /* 顶部对齐，防止高度不同时底部不齐 */
+}
+
+.cv-reader {
+    flex: 1; /* 每个阅读器占据可用空间 */
+    min-width: 526px; /* 设置最小宽度，防止在flex布局下过小 */
+    background-color: #fcfcfc;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* 小阴影效果 */
+    text-align: center;
+    border: 1px solid #eee; /* 细边框 */
+}
+
+.cv-reader h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #34495e;
+    font-size: 1.6em;
+}
+
+.cv-reader iframe {
+    width: 100%;
+    min-height: 700px; /* 增加最小高度，确保PDF内容清晰可见 */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff; /* iframe背景色 */
+}
+
+.download-link {
+    margin-top: 20px;
+    font-size: 1.1em; /* 下载链接字体稍大 */
+}
+
+.download-link a {
+    color: #007bff; /* 蓝色链接 */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.download-link a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* 响应式调整：在小屏幕上，PDF阅读器垂直堆叠 */
+@media (max-width: 1024px) { /* 调整断点以适应常见平板尺寸 */
+    .cv-readers-wrapper {
+        flex-direction: column; /* 垂直堆叠 */
+        align-items: center; /* 垂直堆叠时居中对齐 */
+    }
+    .cv-reader {
+        min-width: 90%; /* 在小屏幕上占据更多宽度 */
+    }
+    .cv-reader iframe {
+        min-height: 500px; /* 小屏幕上iframe高度可以略减 */
+    }
+}
+
+@media (max-width: 768px) {
+    .cv-title {
+        font-size: 2em;
+    }
+    .cv-page-container {
+        padding: 20px 15px;
+        margin: 20px auto;
+    }
+}
