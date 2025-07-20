@@ -3,6 +3,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+    background-image: url('images/bg.jpg');
+    background-size: 50% 50%;
     background-color: #f0f2f5; /* 浅灰色背景 */
     color: #333;
     line-height: 1.7;
@@ -110,8 +112,12 @@ ol {
     text-align: center;
     overflow-y: auto;
     position: sticky; 
-    top: 20px; 
+    top: 50px; 
     z-index: 10; 
+    /* 让左侧栏在Flex容器中垂直拉伸，以匹配右侧栏的高度 */
+    align-self: stretch; 
+    /* 限制左侧栏的最大高度，防止它拉伸超出屏幕高度，同时保持粘性 */
+    max-height: calc(100vh - 45px); 
 }
 
 /* 主要容器 */
@@ -241,7 +247,7 @@ ol {
 
     .container {
         flex-direction: column;
-        margin: 0;
+        margin: 0 18px;
         border-radius: 0;
         box-shadow: none;
         min-height: auto;
@@ -249,7 +255,6 @@ ol {
 
     .left-column {
         flex: none;
-        width: 100%;
         padding: 20px;
         border-right: none;
         border-bottom: 1px solid #eee;
@@ -258,8 +263,8 @@ ol {
     }
 
     .profile-photo {
-        width: 120px;
-        height: 120px;
+        width: 130px;
+        height: 130px;
     }
 
     .left-column h2 {
@@ -275,7 +280,11 @@ ol {
     }
 
     .right-column h2 {
-        font-size: 1.8em;
+        font-size: 1.5em;
+    }
+
+        .right-column h3 {
+        font-size: 1em;
     }
 }
 
@@ -380,7 +389,7 @@ h3 {
 /* 滚动容器内单个图片样式 */
 .project-images-scroll-container img {
     flex-shrink: 0; /* 阻止图片缩小 */
-    
+
     /* 移除之前固定的 width 和 height */
     /* width: 280px; */
     /* height: 200px; */
@@ -404,7 +413,7 @@ h3 {
     }
 }
 
-/* --- 新增的CV页面样式 --- */
+/* --- CV页面样式 --- */
 .cv-page-container {
     padding: 40px 40px; /* 增加一些内边距 */
     max-width: 1200px;
@@ -486,21 +495,5 @@ h3 {
     .cv-page-container {
         padding: 20px 15px;
         margin: 20px auto;
-    }
-}
-
-/* --- 针对单个阅读器可能需要的样式调整 --- */
-/* 仅当 .cv-readers-wrapper 内部只有一个 .cv-reader 元素时生效 */
-.cv-readers-wrapper.single-reader .cv-reader {
-    flex: 0 0 auto; /* 取消 flex: 1 的效果 */
-    width: 80%; /* 占据父容器的80%宽度 */
-    min-width: 1145px; /* 防止过窄 */
-}
-
-/* 响应式调整 for single reader */
-@media (max-width: 1024px) {
-    .cv-readers-wrapper.single-reader .cv-reader {
-        width: 90%; /* 在平板/手机上宽度更大一些 */
-        max-width: none; /* 移除最大宽度限制 */
     }
 }
