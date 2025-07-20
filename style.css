@@ -497,3 +497,11 @@ h3 {
         margin: 20px auto;
     }
 }
+
+/* --- 针对单个阅读器可能需要的样式调整 --- */
+/* 仅当 .cv-readers-wrapper 内部只有一个 .cv-reader 元素时生效 */
+.cv-readers-wrapper.single-reader .cv-reader {
+    flex: 0 0 auto; /* 取消 flex: 1 的效果 */
+    width: 80%; /* 占据父容器的80%宽度 */
+    min-width: 1145px; /* 防止过窄 */
+}
