@@ -17,21 +17,21 @@ Hi, I'm **Haopeng Deng**, and I created this clean, modern, and responsive acade
 ## 📁 Project Structure
 
 ```
-📦 qianyhp.github.io/ #Root directory
-├── 📄 index.html # Homepage entry
-├── 📄 cv.html # Resume page
-├── 📄 portfolio.html # Portfolio page
-├── 🎨 style.css # Stylesheet
-├── 📜 script.js # Interactive behavior
+📦 qianyhp.github.io/        ← Root directory
+├── 📄 index.html            ← Homepage entry
+├── 📄 cv.html               ← Resume page
+├── 📄 portfolio.html        ← Portfolio page
+├── 🎨 style.css             ← Stylesheet
+├── 📜 script.js             ← Interactive behavior
 │
-├── 📁 assets/ # PDF documents
-│ ├── 📄 CV.pdf # CV file
-│ └── 📄 portfolio-Deng.pdf # Portfolio PDF
+├── 📁 assets/               ← PDF documents
+│ ├── 📄 CV.pdf              ← CV file
+│ └── 📄 portfolio-Deng.pdf  ← Portfolio PDF
 │
-├── 📁 images/ # Image assets
-│ ├── 👤 profile.jpg # Profile photo
-│ ├── 🌟 favicon.png # Website favicon
-│ └── 🖼️ project1_fig2.svg # Lllustration
+├── 📁 images/               ← Image assets
+│ ├── 👤 profile.jpg         ← Profile photo
+│ ├── 🌟 favicon.png         ← Website favicon
+│ └── 🖼️ project1_fig2.svg   ← Illustration
 ```
 
 ## 🚀 How to Use
