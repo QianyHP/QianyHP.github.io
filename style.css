@@ -4,16 +4,15 @@ html {
     -webkit-font-smoothing: antialiased;
 }
 
-/* 通用样式和重置 */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
     background-image: url('images/bg.jpg');
     background-size: 50% 50%;
     background-color: #F1F5F9; 
     color: #1E293B; 
-    line-height: 1.7;
+    line-height: 1.75;
 }
 
 a {
@@ -38,12 +37,17 @@ ol {
     padding-left: 20px;
 }
 
-/* 页眉样式：半透明毛玻璃微调 */
+ol li strong {
+    background: linear-gradient(to top, rgba(44, 82, 130, 0.12) 40%, transparent 40%);
+    padding: 0 2px;
+    color: #0F172A;
+}
+
 .main-header {
     background-color: rgba(255, 255, 255, 0.75);
     color: #1E293B;
     padding: 16px 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.03); /* 弱化阴影，更显高级 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.03);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -63,12 +67,13 @@ ol {
 
 .site-title {
     margin: 0;
-    font-size: 1.15em;
+    font-size: 1.3em;
     font-weight: 700;
     letter-spacing: -0.02em; 
 }
 
 .site-title a {
+    font-family: 'Georgia', 'Times New Roman', serif;
     color: #0F172A !important;   
     text-decoration: none;
     font-weight: 700;
@@ -93,7 +98,7 @@ ol {
 }
 
 .main-nav a {
-    color: #475569;
+    color: #334155;
     font-weight: 500;
     font-size: 1.05em;
     padding: 6px 0;
@@ -113,7 +118,7 @@ ol {
     height: 1.5px;
     bottom: -2px;
     left: 0;
-    background-color: #1E3A5F; /* 导航线下划线同步为墨蓝 */
+    background-color: #1E3A5F;
     transition: width .25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
@@ -121,7 +126,6 @@ ol {
     width: 100%;
 }
 
-/* 主要容器 */
 .container {
     display: flex;
     max-width: 1200px;
@@ -129,22 +133,23 @@ ol {
     background-color: #fff;
     box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04); 
     border-radius: 12px;
-    overflow: hidden;
+    position: relative;
 }
 
-/* 左边栏样式 */
 .left-column {
     flex: 0 0 280px; 
     background-color: #FAFAFA; 
     padding: 40px 24px; 
     border-right: 1px solid #E2E8F0; 
     text-align: center;
-    overflow-y: auto;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
     position: sticky; 
-    top: 60px; 
+    top: 80px; 
     z-index: 10; 
-    align-self: stretch; 
-    max-height: calc(100vh - 55px); 
+    align-self: flex-start; 
+    max-height: calc(100vh - 120px); 
+    overflow-y: auto;
 }
 
 .profile-photo {
@@ -207,11 +212,12 @@ ol {
     font-size: 1.05em;
 }
 
-/* 右边栏样式 */
 .right-column {
     flex: 1;
     padding: 40px 45px;
     min-width: 0; 
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
 }
 
 .section-block {
@@ -220,6 +226,7 @@ ol {
     border-bottom: 1px solid #F1F5F9;
     content-visibility: auto;
     contain-intrinsic-size: 0 300px;
+    animation: fadeUp 0.7s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
 }
 
 .section-block:last-child {
@@ -229,11 +236,12 @@ ol {
 
 .right-column .section-block h2,
 .right-column h2 {
-    color: #0F172A !important;     
+    font-family: 'Georgia', 'Times New Roman', serif;
+    color: #0F172A !important;      
     display: inline-block !important;
     border-bottom: 2.5px solid #1E3A5F !important; 
-    padding-bottom: 0px !important;
-    margin-bottom: 4px !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 8px !important;
     font-weight: 700 !important;
     letter-spacing: -0.01em;
 }
@@ -271,13 +279,13 @@ ol {
 }
 
 h3 {
+    font-family: 'Georgia', 'Times New Roman', serif;
     font-size: 1.15em;
     color: #1E293B;
     font-weight: 700;
     margin-bottom: 12px; 
 }
 
-/* --- 淡入位移 CSS 动画 --- */
 @keyframes fadeUp {
     0% {
         opacity: 0;
@@ -289,17 +297,12 @@ h3 {
     }
 }
 
-.section-block {
-    animation: fadeUp 0.7s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
-}
-
 .section-block:nth-child(1) { animation-delay: 0.05s; }
 .section-block:nth-child(2) { animation-delay: 0.15s; }
 .section-block:nth-child(3) { animation-delay: 0.25s; }
 .section-block:nth-child(4) { animation-delay: 0.35s; }
 .section-block:nth-child(n+5) { animation-delay: 0.4s; }
 
-/* --- 项目图片横向滚动（全面优雅化） --- */
 .project-images-scroll-container {
     display: flex; 
     overflow-x: auto; 
@@ -309,13 +312,17 @@ h3 {
     padding-bottom: 12px; 
     gap: 16px;
     margin-top: 14px; 
-
+    cursor: grab;
     scrollbar-width: thin; 
     scrollbar-color: #CBD5E1 #F1F5F9;
 }
 
+.project-images-scroll-container:active {
+    cursor: grabbing;
+}
+
 .project-images-scroll-container::-webkit-scrollbar {
-    height: 6px; /* 减薄滚动条，更精致 */
+    height: 6px; 
 }
 
 .project-images-scroll-container::-webkit-scrollbar-track {
@@ -342,7 +349,6 @@ h3 {
     image-rendering: -webkit-optimize-contrast; 
 }
 
-/* --- CV/PS页面样式调整 --- */
 .cv-page-container {
     padding: 40px; 
     max-width: 1200px;
@@ -383,7 +389,6 @@ h3 {
     background-color: #fff; 
 }
 
-/* 响应式媒体查询 */
 @media (max-width: 768px) {
     .main-header {
         padding: 12px 0;
