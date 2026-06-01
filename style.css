@@ -65,16 +65,21 @@ ol {
     margin: 0;
     font-size: 1.15em;
     font-weight: 700;
-    letter-spacing: -0.02em; /* 紧凑字距，大牌感 */
+    letter-spacing: -0.02em; 
 }
 
 .site-title a {
-    color: #0F172A;
-    border-bottom: none;
+    color: #0F172A !important;   
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.2s ease-in-out;
+    border-bottom: none !important; 
 }
+
 .site-title a:hover {
-    color: #0F172A;
-    border-bottom: none;
+    color: #1E3A5F !important;
+    text-decoration: none;
+    border-bottom: none !important;
 }
 
 .main-nav ul {
