@@ -145,10 +145,10 @@ ol li strong {
     border-top-left-radius: 12px;
     border-bottom-left-radius: 12px;
     position: sticky; 
-    top: 80px; 
+    top: 60px; 
     z-index: 10; 
     align-self: flex-start; 
-    max-height: calc(100vh - 120px); 
+    height: calc(100vh - 60px); 
     overflow-y: auto;
 }
 
@@ -418,7 +418,7 @@ h3 {
         border-right: none;
         border-bottom: 1px solid #E2E8F0;
         position: static;
-        max-height: none;
+        height: auto;
     }
     .profile-photo {
         width: 120px;
