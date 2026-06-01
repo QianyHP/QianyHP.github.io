@@ -1,6 +1,5 @@
 html {
     scroll-behavior: smooth;
-    /* 开启现代浏览器底层的渲染硬加速，使长网页滑动无掉帧 */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
 }
@@ -12,20 +11,22 @@ body {
     font-family: 'Lato', 'Segoe UI', Arial, sans-serif;
     background-image: url('images/bg.jpg');
     background-size: 50% 50%;
-    background-color: #f0f2f5; /* 浅灰色背景 */
-    color: #333;
+    background-color: #F1F5F9; 
+    color: #1E293B; 
     line-height: 1.7;
 }
 
 a {
-    color: #1E3A8A; /* 链接蓝色 */
+    color: #2C5282; 
     text-decoration: none;
-    transition: color 0.3s ease, text-decoration 0.3s ease;
+    transition: color 0.2s ease-in-out, border-bottom 0.2s ease-in-out;
+    border-bottom: 1px solid transparent;
 }
 
 a:hover {
-    text-decoration: underline;
-    color: #3B82F6; /* 悬停时颜色稍微加深 */
+    text-decoration: none;
+    color: #B45309; 
+    border-bottom: 1px solid #B45309;
 }
 
 ul {
@@ -37,24 +38,24 @@ ol {
     padding-left: 20px;
 }
 
-/* 页眉样式 */
+/* 页眉样式：半透明毛玻璃微调 */
 .main-header {
-    background-color: rgba(255, 255, 255, 0.7);
-    color: #333;
-    padding: 15px 0;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.75);
+    color: #1E293B;
+    padding: 16px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 4px 12px rgba(0, 0, 0, 0.03); /* 弱化阴影，更显高级 */
     position: sticky;
     top: 0;
     z-index: 1000;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
 }
 
 .header-content {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -62,13 +63,18 @@ ol {
 
 .site-title {
     margin: 0;
-    font-size: 1.1em;
+    font-size: 1.15em;
     font-weight: 700;
+    letter-spacing: -0.02em; /* 紧凑字距，大牌感 */
 }
 
 .site-title a {
-    color: #555;
-    text-decoration: none;
+    color: #0F172A;
+    border-bottom: none;
+}
+.site-title a:hover {
+    color: #0F172A;
+    border-bottom: none;
 }
 
 .main-nav ul {
@@ -78,32 +84,32 @@ ol {
 }
 
 .main-nav li {
-    margin-left: 30px;
+    margin-left: 32px;
 }
 
 .main-nav a {
-    color: #555;
+    color: #475569;
     font-weight: 500;
-    font-size: 1.1em;
-    padding: 5px 0;
+    font-size: 1.05em;
+    padding: 6px 0;
     position: relative;
-    transition: color 0.3s ease;
+    border-bottom: none;
 }
 
 .main-nav a:hover {
-    text-decoration: none;
-    color: #3B82F6;
+    color: #0F172A;
+    border-bottom: none;
 }
 
 .main-nav a::after {
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    bottom: -5px;
+    height: 1.5px;
+    bottom: -2px;
     left: 0;
-    background-color: #3B82F6;
-    transition: width .3s ease-in-out;
+    background-color: #1E3A5F; /* 导航线下划线同步为墨蓝 */
+    transition: width .25s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .main-nav a:hover::after {
@@ -114,53 +120,57 @@ ol {
 .container {
     display: flex;
     max-width: 1200px;
-    margin: 30px auto;
+    margin: 40px auto;
     background-color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04); 
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 /* 左边栏样式 */
 .left-column {
     flex: 0 0 280px; 
-    background-color: #f8f9fa; 
-    padding: 30px 20px; 
-    border-right: 1px solid #eee; 
+    background-color: #FAFAFA; 
+    padding: 40px 24px; 
+    border-right: 1px solid #E2E8F0; 
     text-align: center;
     overflow-y: auto;
     position: sticky; 
-    top: 50px; 
+    top: 60px; 
     z-index: 10; 
     align-self: stretch; 
-    max-height: calc(100vh - 45px); 
+    max-height: calc(100vh - 55px); 
 }
 
 .profile-photo {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
-    border: 2px solid #3B82F6;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease; /* 换用更丝滑的贝塞尔曲线 */
+    margin-bottom: 20px;
+    border: 1px solid #E2E8F0; 
+    padding: 4px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .profile-photo:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.03);
 }
 
 .left-column h2 {
-    font-size: 1.8em;
-    color: #4B5563;
-    margin-bottom: 5px;
+    font-size: 1.6em;
+    color: #0F172A;
+    font-weight: 700;
+    margin-bottom: 6px;
 }
 
 .left-column .title {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 25px;
+    font-size: 0.95em;
+    color: #64748B;
+    margin-bottom: 30px;
+    line-height: 1.4;
 }
 
 .contact-info ul {
@@ -168,35 +178,41 @@ ol {
 }
 
 .contact-info li {
-    margin-bottom: 15px;
+    margin-bottom: 16px;
     font-size: 0.95em;
-    color: #555;
+    color: #475569;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    text-align: left;
+}
+
+.contact-info li a {
+    color: #475569;
+    border-bottom: none;
+}
+.contact-info li a:hover {
+    color: #B45309;
 }
 
 .contact-info li i {
-    margin-right: 10px;
-    color: #6B7280;
+    margin-right: 12px;
+    color: #94A3B8;
     min-width: 20px;
     text-align: center;
+    font-size: 1.05em;
 }
 
 /* 右边栏样式 */
 .right-column {
     flex: 1;
-    padding: 30px;
+    padding: 40px 45px;
     min-width: 0; 
 }
 
 .section-block {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    
-    /* 渲染性能优化：告知浏览器仅在视口附近时高强度渲染该块，大幅降低长页面滑动卡顿 */
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #F1F5F9;
     content-visibility: auto;
     contain-intrinsic-size: 0 300px;
 }
@@ -206,32 +222,36 @@ ol {
     margin-bottom: 0;
 }
 
+/* 核心优化：右侧板块标题下划线，改用具有厚重感的深爵士蓝 */
 .right-column h2 {
-    font-size: 1.5em;
-    color: #2c3e50;
-    margin-bottom: 5px;
-    border-bottom: 2px solid #3B82F6;
-    padding-bottom: 5px;
+    font-size: 1.45em;
+    color: #0F172A;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 2.5px solid #1E3A5F; /* 学院派深墨蓝 */
+    padding-bottom: 4px;
     display: inline-block;
+    letter-spacing: -0.01em;
 }
 
 .right-column p,
 .right-column li {
-    font-size: 1em;
-    line-height: 1.7;
-    margin-bottom: 10px;
+    font-size: 0.98em; /* 微调字号，配合Lato字体更显精致 */
+    color: #334155; /* 避免纯黑，采用高级炭灰 */
+    line-height: 1.75;
 }
 
-.right-column ul li {
-    margin-bottom: 15px;
+.right-column ul li, 
+.right-column ol li {
+    margin-bottom: 12px;
 }
 
 /* 词云与图片并排容器 */
 .image-container {
     display: flex; 
     justify-content: space-between; 
-    gap: 20px; 
-    margin-top: 20px; 
+    gap: 24px; 
+    margin-top: 24px; 
 }
 
 .image-column {
@@ -243,19 +263,22 @@ ol {
     width: 100%; 
     max-width: 500px; 
     height: auto; 
-    border-radius: 8px; 
+    border-radius: 6px; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
 }
 
 h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px; 
+    font-size: 1.15em;
+    color: #1E293B;
+    font-weight: 700;
+    margin-bottom: 12px; 
 }
 
-/* --- 精炼优化后的淡入位移 CSS 动画 --- */
+/* --- 淡入位移 CSS 动画 --- */
 @keyframes fadeUp {
     0% {
         opacity: 0;
-        transform: translateY(20px); /* 减小位移距离（从30px降到20px），滑动时动画过渡更自然、不突兀 */
+        transform: translateY(15px);
     }
     100% {
         opacity: 1;
@@ -263,79 +286,72 @@ h3 {
     }
 }
 
-/* 应用到需要动画效果的元素 */
 .section-block {
-    animation: fadeUp 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards; /* 换用更高级的减速曲线 */
+    animation: fadeUp 0.7s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
 }
 
-/* 自动化安全延迟：使用 nth-child 延迟，同时确保哪怕有 5、6、7 个块也不会永远隐形 */
-.section-block:nth-child(1) { animation-delay: 0.1s; }
-.section-block:nth-child(2) { animation-delay: 0.25s; }
-.section-block:nth-child(3) { animation-delay: 0.4s; }
-.section-block:nth-child(4) { animation-delay: 0.55s; }
-.section-block:nth-child(n+5) { animation-delay: 0.6s; } /* 兜底机制：第5个之后的板块统一在此延迟展现，绝不漏显 */
+.section-block:nth-child(1) { animation-delay: 0.05s; }
+.section-block:nth-child(2) { animation-delay: 0.15s; }
+.section-block:nth-child(3) { animation-delay: 0.25s; }
+.section-block:nth-child(4) { animation-delay: 0.35s; }
+.section-block:nth-child(n+5) { animation-delay: 0.4s; }
 
-/* --- 图片水平滚动容器样式（全面丝滑升级） --- */
+/* --- 项目图片横向滚动（全面优雅化） --- */
 .project-images-scroll-container {
     display: flex; 
     overflow-x: auto; 
-    scroll-behavior: smooth; /* 开启局部横向滚动的丝滑平滑过渡 */
-    -webkit-overflow-scrolling: touch; /* 强行激活 iOS 设备的硬件级弹性滚动惯性 */
+    scroll-behavior: smooth; 
+    -webkit-overflow-scrolling: touch; 
     white-space: nowrap; 
-    padding-bottom: 10px; 
-    gap: 15px;
-    margin-top: 10px; 
+    padding-bottom: 12px; 
+    gap: 16px;
+    margin-top: 14px; 
 
-    /* 样式化滚动条 (Firefox) */
     scrollbar-width: thin; 
-    scrollbar-color: #ccc #f1f1f1;
+    scrollbar-color: #CBD5E1 #F1F5F9;
 }
 
-/* 样式化滚动条 (Chrome, Safari, Edge) */
 .project-images-scroll-container::-webkit-scrollbar {
-    height: 8px; 
+    height: 6px; /* 减薄滚动条，更精致 */
 }
 
 .project-images-scroll-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #F1F5F9;
     border-radius: 10px; 
 }
 
 .project-images-scroll-container::-webkit-scrollbar-thumb {
-    background: #ccc; 
+    background: #CBD5E1; 
     border-radius: 10px; 
 }
 
 .project-images-scroll-container::-webkit-scrollbar-thumb:hover {
-    background: #888; 
+    background: #94A3B8; 
 }
 
-/* 滚动容器内单个图片样式 */
 .project-images-scroll-container img {
     flex-shrink: 0; 
-    max-height: 200px; 
+    max-height: 190px; 
     width: auto; 
     object-fit: contain; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
-    
-    /* 图像渲染优化，防止大图在非原比例缩放滚动时产生锯齿和抖动 */
+    border-radius: 6px; 
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04); 
     image-rendering: -webkit-optimize-contrast; 
 }
 
-/* --- CV/PS页面样式 --- */
+/* --- CV/PS页面样式调整 --- */
 .cv-page-container {
-    padding: 40px 40px; 
+    padding: 40px; 
     max-width: 1200px;
-    margin: 30px auto; 
+    margin: 40px auto; 
     background-color: #fff; 
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
 }
 
 .cv-readers-wrapper {
     display: flex;
-    gap: 40px; 
+    gap: 32px; 
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
@@ -343,140 +359,77 @@ h3 {
 
 .cv-reader {
     flex: 1;
-    min-width: 526px;
-    background-color: #fcfcfc;
-    padding: 25px;
+    min-width: 500px;
+    background-color: #FAFAFA;
+    padding: 24px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02); 
     text-align: center;
-    border: 1px solid #eee; 
+    border: 1px solid #E2E8F0; 
 }
 
 .cv-reader h3 {
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: #34495e;
-    font-size: 1.6em;
+    color: #0F172A;
 }
 
 .cv-reader iframe {
     width: 100%;
-    min-height: 700px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    min-height: 750px;
+    border: 1px solid #E2E8F0;
+    border-radius: 6px;
     background-color: #fff; 
 }
 
-.download-link {
-    margin-top: 20px;
-    font-size: 1.1em; 
-}
-
-.download-link a {
-    color: #007bff; 
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.download-link a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-}
-
-/* 响应式媒体查询：移动端全局优化 */
+/* 响应式媒体查询 */
 @media (max-width: 768px) {
     .main-header {
-        padding: 10px 0;
-        backdrop-filter: blur(5px);
-        -webkit-backdrop-filter: blur(5px);
+        padding: 12px 0;
     }
     .header-content {
         flex-direction: column;
         align-items: center;
     }
     .site-title {
-        margin-bottom: 10px;
-    }
-    .site-title a {
-        color: #333;
+        margin-bottom: 12px;
     }
     .main-nav ul {
-        flex-wrap: wrap;
         justify-content: center;
     }
     .main-nav li {
-        margin: 5px 15px;
+        margin: 4px 16px;
     }
-    .main-nav a {
-        color: #555;
-    }
-
     .container {
         flex-direction: column;
-        margin: 0 18px;
+        margin: 0 16px;
         border-radius: 0;
         box-shadow: none;
-        min-height: auto;
     }
-
     .left-column {
         flex: none;
-        padding: 20px;
+        padding: 32px 20px;
         border-right: none;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid #E2E8F0;
         position: static;
-        height: auto;
-        max-height: none; /* 移动端解开高度限制，防止排版重叠 */
+        max-height: none;
     }
-
     .profile-photo {
-        width: 130px;
-        height: 130px;
+        width: 120px;
+        height: 120px;
     }
-
-    .left-column h2 {
-        font-size: 1.5em;
-    }
-
-    .contact-info li {
-        justify-content: center;
-    }
-
     .right-column {
-        padding: 20px;
+        padding: 32px 20px;
     }
-
-    .right-column h2 {
-        font-size: 1.5em;
-    }
-
-    .right-column h3 {
-        font-size: 1em;
-    }
-
     .project-images-scroll-container img {
-        max-height: 150px; 
-        width: auto; 
+        max-height: 140px; 
     }
 }
 
-/* 响应式媒体查询：中等屏幕平板端 PDF 容器调整 */
 @media (max-width: 1024px) { 
     .cv-readers-wrapper {
         flex-direction: column; 
         align-items: center; 
     }
     .cv-reader {
-        min-width: 90%; 
+        min-width: 95%; 
     }
-    .cv-reader iframe {
-        min-height: 500px; 
-    }
-}
-
-.cv-readers-wrapper.single-reader .cv-reader {
-    flex: 0 0 auto; 
-    width: 80%; 
-    min-width: 1145px; 
 }
