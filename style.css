@@ -227,8 +227,8 @@ ol {
     color: #0F172A !important;     
     display: inline-block !important;
     border-bottom: 2.5px solid #1E3A5F !important; 
-    padding-bottom: 6px !important;
-    margin-bottom: 16px !important;
+    padding-bottom: 4px !important;
+    margin-bottom: 8px !important;
     font-weight: 700 !important;
     letter-spacing: -0.01em;
 }
