@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 /* 通用样式和重置 */
 body {
     margin: 0;
