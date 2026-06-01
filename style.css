@@ -209,8 +209,8 @@ ol {
 }
 
 .section-block {
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #F1F5F9;
     content-visibility: auto;
     contain-intrinsic-size: 0 300px;
