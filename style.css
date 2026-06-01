@@ -222,15 +222,14 @@ ol {
     margin-bottom: 0;
 }
 
-/* 核心优化：右侧板块标题下划线，改用具有厚重感的深爵士蓝 */
+.right-column .section-block h2,
 .right-column h2 {
-    font-size: 1.45em;
-    color: #0F172A;
-    font-weight: 700;
-    margin-bottom: 15px;
-    border-bottom: 2.5px solid #1E3A5F; /* 学院派深墨蓝 */
-    padding-bottom: 4px;
-    display: inline-block;
+    color: #0F172A !important;     
+    display: inline-block !important;
+    border-bottom: 2.5px solid #1E3A5F !important; 
+    padding-bottom: 6px !important;
+    margin-bottom: 16px !important;
+    font-weight: 700 !important;
     letter-spacing: -0.01em;
 }
 
