@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Haopeng Deng's personal homepage.">
+    <meta name="description" content="Haopeng Deng — undergraduate researcher in mixed-traffic dynamic assignment, connected autonomous vehicles, and learning-based traffic systems.">
     <meta name="author" content="Haopeng Deng">
-    <meta name="keywords" content="Haopeng Deng, academic, researcher">
-    <title>Haopeng Deng - Homepage</title>
-    <link rel="icon" type="image/png" href="images/favicon.png"> 
+    <meta name="keywords" content="Haopeng Deng, transportation engineering, dynamic traffic assignment, CAV, PhD">
+    <title>Haopeng Deng — Academic Homepage</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Haopeng Deng">
+    <meta property="og:title" content="Haopeng Deng — Academic Homepage">
+    <meta property="og:description" content="Undergraduate researcher in mixed-traffic dynamic assignment, CAV mobility, and learning-based traffic systems.">
+    <meta property="og:url" content="https://qianyhp.github.io/">
+    <meta property="og:image" content="https://qianyhp.github.io/images/profile2.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Haopeng Deng — Academic Homepage">
+    <meta name="twitter:description" content="Undergraduate researcher in mixed-traffic dynamic assignment, CAV mobility, and learning-based traffic systems.">
+    <meta name="twitter:image" content="https://qianyhp.github.io/images/profile2.jpg">
+    <link rel="canonical" href="https://qianyhp.github.io/">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -20,6 +40,11 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="cv&ps.html">CV & PS</a></li>
+                    <li>
+                        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark mode">
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -30,16 +55,16 @@
             <div class="profile-section">
                 <img src="images/profile2.jpg" alt="Profile photo" class="profile-photo">
                 <h2>Haopeng Deng</h2>
-                <p class="title">Transportation Science & Engineering</p>
+                <p class="profile-tagline">Transportation Research · PhD Applicant</p>
             </div>
             <nav class="contact-info">
                 <ul>
-                    <li><i class="fas fa-map-marker-alt"></i> Guangzhou, China</li>
-                    <li><i class="fas fa-envelope"></i> <a href="mailto:qianyhp@gmail.com">Email</a></li>
-                    <li><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/haopeng-deng-737480374/" target="_blank">LinkedIn</a></li>
-                    <li><i class="fab fa-github"></i> <a href="https://github.com/qianyhp" target="_blank">GitHub</a></li>
-                    <li><i class="fas fa-graduation-cap"></i> <a href="https://scholar.google.com/citations?user=CLAjsQEAAAAJ" target="_blank">Google Scholar</a></li>
-                    <li><i class="fab fa-researchgate"></i> <a href="https://www.researchgate.net/profile/Haopeng-Deng-4" target="_blank">ResearchGate</a></li>
+                    <li class="contact-location"><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Guangzhou, China</li>
+                    <li><a href="mailto:qianyhp@gmail.com" aria-label="Email"><i class="fas fa-envelope" aria-hidden="true"></i><span class="contact-label">Email</span></a></li>
+                    <li><a href="https://www.linkedin.com/in/haopeng-deng-737480374/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i><span class="contact-label">LinkedIn</span></a></li>
+                    <li><a href="https://github.com/qianyhp" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github" aria-hidden="true"></i><span class="contact-label">GitHub</span></a></li>
+                    <li><a href="https://scholar.google.com/citations?user=CLAjsQEAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar"><i class="fas fa-graduation-cap" aria-hidden="true"></i><span class="contact-label">Google Scholar</span></a></li>
+                    <li><a href="https://www.researchgate.net/profile/Haopeng-Deng-4" target="_blank" rel="noopener noreferrer" aria-label="ResearchGate"><i class="fab fa-researchgate" aria-hidden="true"></i><span class="contact-label">ResearchGate</span></a></li>
                 </ul>
             </nav>
         </aside>
@@ -48,8 +73,8 @@
             <!-- About Me -->
             <section class="section-block" id="about-me">
                 <h2>About Me</h2>
-                <p style="text-align: justify;">Hi, I'm Haopeng Deng, an undergrad at Guangzhou Maritime University, passionate about traffic flow and urban mobility, and with a particular interest in how Connected and Autonomous Vehicles (CAVs) can reshape the system. Currently, I work on mixed-flow dynamic traffic assignment and learning-based control frameworks that integrate optimization and stochastic modeling. My long-term goal is to build mobility systems that are human-centric, resilient and sustainable, using tools from traffic engineering, data science and beyond.</p>
-                <div style="background-color: #F8FAFC; border-left: 4px solid #1E3A5F; border-radius: 0 6px 6px 0; padding: 12px 16px; margin-top: 18px; font-size: 0.95em; color: #475569; line-height: 1.5; text-align: justify;">
+                <p class="text-justify">Hi, I'm Haopeng Deng, an undergrad at Guangzhou Maritime University, passionate about traffic flow and urban mobility, and with a particular interest in how Connected and Autonomous Vehicles (CAVs) can reshape the system. Currently, I work on mixed-flow dynamic traffic assignment and learning-based control frameworks that integrate optimization and stochastic modeling. My long-term goal is to build mobility systems that are human-centric, resilient and sustainable, using tools from traffic engineering, data science and beyond. I am currently seeking PhD opportunities for Fall 2027.</p>
+                <div class="callout-box">
                 <strong>Open to Collaboration:</strong> I love doing research and am always eager to connect with anyone sharing similar interests. Drop me an email anytime at <a href="mailto:qianyhp@gmail.com">qianyhp@gmail.com</a>!
                 </div>
             </section>
@@ -59,12 +84,16 @@
                 <h2>Interests & Skills</h2>
                 <div class="image-container">
                     <div class="image-column">
-                        <h3>Research Interests</h3>
-                        <img src="images/interest_wordcloud.png" alt="Research Interests Word Cloud" class="wordcloud-image">
+                        <div class="wordcloud-frame">
+                            <h3 class="wordcloud-frame__title">Research Interests</h3>
+                            <img src="images/interest_wordcloud.png" alt="Research Interests Word Cloud" class="wordcloud-image" loading="lazy" decoding="async">
+                        </div>
                     </div>
                     <div class="image-column">
-                        <h3>Core Skills</h3>
-                        <img src="images/skills_wordcloud.png" alt="Skills Word Cloud" class="wordcloud-image">
+                        <div class="wordcloud-frame">
+                            <h3 class="wordcloud-frame__title">Core Skills</h3>
+                            <img src="images/skills_wordcloud.png" alt="Skills Word Cloud" class="wordcloud-image" loading="lazy" decoding="async">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -78,7 +107,7 @@
       <strong>Deng, H.</strong>, Zheng, F., & Xia, X. (2026).
       SpinFlow: A Physics-Informed Spin Field Framework for Traffic Phase Inference and Transition Detection.
       <em>The IEEE International Conference on Intelligent Transportation Systems (ITSC)</em>.
-      <a href="https://doi.org/10.48550/arXiv.2605.23306" target="_blank">[Arxiv]</a>
+      <a href="https://doi.org/10.48550/arXiv.2605.23306" target="_blank" rel="noopener noreferrer">[arXiv]</a>
     </li>
     <li>
       Xia, X., <strong>Deng, H.</strong>, Tang, J., et al. (2026).
@@ -129,41 +158,41 @@
 
     <div class="experience">
         <h3>Guangdong Provincial Special Fund for Science and Technology Innovation Strategy</h3>
-        <p><em>Cooperative Game-Based Network Traffic Assignment Mechanisms for Enhancing Urban Transportation Efficiency</em></p>
-        <p style="text-align: justify;">
+        <p class="meta-line"><em>Cooperative Game-Based Network Traffic Assignment Mechanisms for Enhancing Urban Transportation Efficiency</em> <span class="meta-date">07/2024-04/2026</span></p>
+        <p class="text-justify">
                 I lead a project on cooperative game-based traffic assignment mechanisms for urban transportation efficiency. I developed a unified Dynamic Traffic Assignment model that decouples CAV adoption into two dimensions—Automation Level and Connectivity Level—and positions the system along a continuous spectrum between user equilibrium and system optimum within this AL-CL space. I also proposed the AMPAS algorithm to efficiently solve DUE, DSO, and UE-SO mixed equilibria, achieving 27.2% faster convergence than gradient projection on medium-scale networks. Additionally, I authored a systematic review on mixed-traffic DTA models, synthesizing findings from over 120 studies on equilibrium evolution, algorithms, and research trends. I also coordinate task delegation, track milestones, and mentor junior researchers.
         </p>
         <div class="project-images-scroll-container">
-            <img src="images/project1_fig1.jpg" alt="Project 1 Image 1">
-            <img src="images/project1_fig2.png" alt="Project 1 Image 2">
-            <img src="images/project1_fig3.jpg" alt="Project 1 Image 3">
+            <img src="images/project1_fig1.jpg" alt="Project 1 Image 1" loading="lazy" decoding="async">
+            <img src="images/project1_fig2.png" alt="Project 1 Image 2" loading="lazy" decoding="async">
+            <img src="images/project1_fig3.jpg" alt="Project 1 Image 3" loading="lazy" decoding="async">
             </div>
     </div>
 
     <div class="experience">
         <h3>Guangdong Provincial College Student Innovation and Entrepreneurship Training Program</h3>
-        <p><em>Intelligent Recognition of Urban Traffic Equilibrium States under Air-Ground Collaborative Monitoring</em></p>
-        <p style="text-align: justify;">
+        <p class="meta-line"><em>Intelligent Recognition of Urban Traffic Equilibrium States under Air-Ground Collaborative Monitoring</em> <span class="meta-date">11/2024-02/2026</span></p>
+        <p class="text-justify">
             As a core member, I contributed to developing an intelligent system for recognizing urban traffic equilibrium states, integrating data from roadside sensors, UAVs, and probe vehicles. My team aimed to construct high-dimensional traffic flow tensors and explore data loss structures—including element-wise, fiber-wise, and mixed loss—to improve data recovery algorithms. I developed an adaptive truncated Schatten norm-based model (LRTC-ATSN) for recovering traffic data with complex missing patterns, improving MAPE by 10.6% and RMSE by 6.1%. I also proposed SpinFlow, a physics-informed model driven by a latent spin field to capture competitive equilibrium among traffic phases, combined with an Expectation-Maximization algorithm to infer synchronized flow emergence from aerial trajectory data.
         </p>
         <div class="project-images-scroll-container">
-            <img src="images/project2_fig1.png" alt="Project 2 Image 1">
-            <img src="images/project2_fig2.png" alt="Project 2 Image 2">
-            <img src="images/project2_fig3.png" alt="Project 2 Image 3">            
-            <img src="images/project2_fig4.png" alt="Project 2 Image 4">        
+            <img src="images/project2_fig1.png" alt="Project 2 Image 1" loading="lazy" decoding="async">
+            <img src="images/project2_fig2.png" alt="Project 2 Image 2" loading="lazy" decoding="async">
+            <img src="images/project2_fig3.png" alt="Project 2 Image 3" loading="lazy" decoding="async">
+            <img src="images/project2_fig4.png" alt="Project 2 Image 4" loading="lazy" decoding="async">
         </div>
     </div>
 
     <div class="experience">
         <h3>High-Quality Development Project for Hundred Counties, Thousand Towns, Myriad Villages</h3>
-        <p><em>Investigation and Research on Traffic Safety and Planning in Kaiping City</em></p>
-        <p style="text-align: justify;">
+        <p class="meta-line"><em>Investigation and Research on Traffic Safety and Planning in Kaiping City</em> <span class="meta-date">07/2024</span></p>
+        <p class="text-justify">
             I led a team investigating traffic safety and planning in Kaiping City, working with the Kaiping Municipal Transportation Bureau to analyze accident and violation data and identify crash hotspots and hazard types. My team conducted on-site surveys, interviews, and drone photography to gather data on traffic flow, vehicle management, pedestrian movement, and infrastructure. I applied SPSS and LLM tools to analyze the survey and interview data, identifying recurring issues and proposing solutions that were later adopted by the Municipal Transportation Bureau. I also authored two papers from this project: one using Structural Equation Modeling to examine the relationship between traffic safety behavior and attitudes, and another assessing Kaiping's traffic governance through Grey Relational Analysis and Fuzzy Evaluation.
         </p>
         <div class="project-images-scroll-container">
-            <img src="images/project3_fig1.png" alt="Project 3 Image 1">
-            <img src="images/project3_fig2.png" alt="Project 3 Image 2">
-            <img src="images/project3_fig3.png" alt="Project 3 Image 3">
+            <img src="images/project3_fig1.png" alt="Project 3 Image 1" loading="lazy" decoding="async">
+            <img src="images/project3_fig2.png" alt="Project 3 Image 2" loading="lazy" decoding="async">
+            <img src="images/project3_fig3.png" alt="Project 3 Image 3" loading="lazy" decoding="async">
         </div>
     </div>
 </section>
@@ -174,8 +203,8 @@
   
   <div class="project-item">
     <h3>Smart Sustainable Cities and Transportation Winter School</h3>
-    <p><em>Tsinghua University & Technical University of Munich</em><span style="float: right;">12/2025</span></p>
-    <p style="text-align: justify;">
+    <p class="meta-line"><em>Tsinghua University & Technical University of Munich</em> <span class="meta-date">12/2025</span></p>
+    <p class="text-justify">
            Selected as one of 67 participants, I completed 11 modules on data-driven modeling, digital twins, and autonomous driving. It helped me see transportation problems not just as technical optimization tasks, but as societal systems, where algorithmic design needs to account for real-world uncertainty, human behavior, and equity.
     </p>
   </div>
@@ -185,16 +214,59 @@
             <section class="section-block" id="awards-honors">
                 <h2>Awards and Honors</h2>
                 <ul>
-                  <li>Best Poster Award (International), The 25th CICTP Conference, COTA <span style="float: right;">2025</span></li>
-                  <li>Meritorious Winner (International), Interdisciplinary Contest in Modeling (ICM), COMAP <span style="float: right;">2025</span></li>
-                  <li>Third Prize (Provincial), 18th "Challenge Cup" National Students' Academic Works Competition <span style="float: right;">2025</span></li>
-                  <li>Yang Hanlin Scholarship (Top 0.2%, 3/1210), Guangzhou Maritime University <span style="float: right;">2025</span></li>
-                  <li>Third Prize (Provincial), China Undergraduate Mathematical Contest in Modeling <span style="float: right;">2024</span></li>
-                  <li>Bronze Award (Provincial), FLTRP · ETIC Cup English Writing Contest <span style="float: right;">2023</span></li>
+                  <li class="meta-line"><span class="meta-line__body">Best Poster Award (International), The 25th CICTP Conference, COTA</span> <span class="meta-date">2025</span></li>
+                  <li class="meta-line"><span class="meta-line__body">Meritorious Winner (International), Interdisciplinary Contest in Modeling (ICM), COMAP</span> <span class="meta-date">2025</span></li>
+                  <li class="meta-line"><span class="meta-line__body">Third Prize (Provincial), 18th "Challenge Cup" National Students' Academic Works Competition</span> <span class="meta-date">2025</span></li>
+                  <li class="meta-line"><span class="meta-line__body">Yang Hanlin Scholarship (Top 0.2%, 3/1210), Guangzhou Maritime University</span> <span class="meta-date">2025</span></li>
+                  <li class="meta-line"><span class="meta-line__body">Third Prize (Provincial), China Undergraduate Mathematical Contest in Modeling</span> <span class="meta-date">2024</span></li>
+                  <li class="meta-line"><span class="meta-line__body">Bronze Award (Provincial), FLTRP · ETIC Cup English Writing Contest</span> <span class="meta-date">2023</span></li>
                 </ul>
             </section>
         </main>
     </div>
 
+    <nav class="section-jumper" aria-label="Page sections">
+        <button type="button" class="section-jumper__handle" aria-label="Open page navigation" aria-expanded="false">
+            <i class="fas fa-grip-lines-vertical" aria-hidden="true"></i>
+        </button>
+        <div class="section-jumper__panel">
+        <button type="button" class="section-jumper__btn section-jumper__btn--edge" data-action="top" aria-label="Back to top">
+            <i class="fas fa-angles-up" aria-hidden="true"></i>
+        </button>
+        <span class="section-jumper__divider" aria-hidden="true"></span>
+        <button type="button" class="section-jumper__btn" data-dir="prev" aria-label="Previous section">
+            <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </button>
+        <div class="section-jumper__menu">
+            <button type="button" class="section-jumper__toggle" aria-expanded="false" aria-haspopup="true" aria-controls="section-jumper-list" aria-label="Jump to section" title="Sections">
+                <i class="fas fa-list-ul" aria-hidden="true"></i>
+            </button>
+            <ul class="section-jumper__dropdown" id="section-jumper-list" hidden>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#interests-skills">Interests &amp; Skills</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#research-experiences">Research</a></li>
+                <li><a href="#academic-exchange">Exchange</a></li>
+                <li><a href="#awards-honors">Awards</a></li>
+            </ul>
+        </div>
+        <button type="button" class="section-jumper__btn" data-dir="next" aria-label="Next section">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </button>
+        <span class="section-jumper__divider" aria-hidden="true"></span>
+        <button type="button" class="section-jumper__btn section-jumper__btn--edge" data-action="bottom" aria-label="Back to bottom">
+            <i class="fas fa-angles-down" aria-hidden="true"></i>
+        </button>
+        </div>
+    </nav>
+
+    <footer class="site-footer">
+        <blockquote class="site-quote" cite="https://en.wikiquote.org/wiki/Albert_Einstein">
+            <p class="site-quote__text">The most beautiful thing we can experience is the mysterious. It is the source of all true art and science.</p>
+            <footer class="site-quote__attrib">Albert Einstein</footer>
+        </blockquote>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

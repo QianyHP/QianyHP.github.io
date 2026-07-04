@@ -3,9 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haopeng Deng - CV & PS</title>
-    <link rel="icon" type="image/png" href="images/favicon.png"> 
+    <meta name="description" content="Curriculum vitae and personal statement — Haopeng Deng, transportation engineering researcher.">
+    <meta name="author" content="Haopeng Deng">
+    <title>Haopeng Deng — CV &amp; Personal Statement</title>
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Haopeng Deng">
+    <meta property="og:title" content="Haopeng Deng — CV &amp; Personal Statement">
+    <meta property="og:description" content="Curriculum vitae and personal statement — Haopeng Deng, transportation engineering researcher.">
+    <meta property="og:url" content="https://qianyhp.github.io/cv&amp;ps.html">
+    <meta property="og:image" content="https://qianyhp.github.io/images/profile2.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Haopeng Deng — CV &amp; Personal Statement">
+    <meta name="twitter:description" content="Curriculum vitae and personal statement — Haopeng Deng, transportation engineering researcher.">
+    <meta name="twitter:image" content="https://qianyhp.github.io/images/profile2.jpg">
+    <link rel="canonical" href="https://qianyhp.github.io/cv&amp;ps.html">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script>
+        (function () {
+            var t = localStorage.getItem('theme');
+            if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="main-header">
@@ -14,25 +38,45 @@
             <nav class="main-nav">
                 <ul>
                     <li><a href="cv&ps.html">CV & PS</a></li>
+                    <li>
+                        <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode" title="Dark mode">
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                        </button>
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <div class="cv-page-container">
+        <div class="cv-mobile-tabs" role="tablist" aria-label="Document selector">
+            <button type="button" role="tab" class="cv-tab is-active" id="cv-tab" aria-selected="true" aria-controls="cv-panel" data-panel="cv-panel">Curriculum Vitae</button>
+            <button type="button" role="tab" class="cv-tab" id="ps-tab" aria-selected="false" aria-controls="ps-panel" data-panel="ps-panel">Personal Statement</button>
+        </div>
         <div class="cv-readers-wrapper">
-            <div class="cv-reader">
-                <h2>Curriculum Vitae</h2>
-                <iframe src="assets/CV.pdf"></iframe>
-                <p class="download-link"><a href="assets/CV.pdf" target="_blank" download>Download PDF</a></p>
+            <div class="cv-reader is-active" id="cv-panel" role="tabpanel" aria-labelledby="cv-tab">
+                <h2 class="cv-reader__heading">Curriculum Vitae</h2>
+                <iframe title="Curriculum Vitae PDF" data-src="assets/CV.pdf"></iframe>
+                <p class="pdf-open-fallback"><a href="assets/CV.pdf" target="_blank" rel="noopener noreferrer">Open in browser</a> if preview does not load.</p>
+                <p class="download-link"><a href="assets/CV.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
             </div>
 
-            <div class="cv-reader">
-                <h2>Personal Statement</h2>
-                <iframe src="assets/PS.pdf"></iframe>
-                <p class="download-link"><a href="assets/PS.pdf" target="_blank" download>Download PDF</a></p>
+            <div class="cv-reader" id="ps-panel" role="tabpanel" aria-labelledby="ps-tab">
+                <h2 class="cv-reader__heading">Personal Statement</h2>
+                <iframe title="Personal Statement PDF" data-src="assets/PS.pdf"></iframe>
+                <p class="pdf-open-fallback"><a href="assets/PS.pdf" target="_blank" rel="noopener noreferrer">Open in browser</a> if preview does not load.</p>
+                <p class="download-link"><a href="assets/PS.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></p>
             </div>
         </div>
     </div>
+
+    <footer class="site-footer">
+        <blockquote class="site-quote" cite="https://en.wikiquote.org/wiki/Albert_Einstein">
+            <p class="site-quote__text">The most beautiful thing we can experience is the mysterious. It is the source of all true art and science.</p>
+            <footer class="site-quote__attrib">Albert Einstein</footer>
+        </blockquote>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
