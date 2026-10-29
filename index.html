@@ -73,7 +73,7 @@
             <!-- About Me -->
             <section class="section-block" id="about-me">
                 <h2>About Me</h2>
-                <p class="text-justify">Hi, I'm Haopeng Deng, a recent graduate of Guangzhou Maritime University, and currently a summer researcher at MIT. My work spans Physics-informed Learning, Surrogate Bayesian Optimization, and Mixed-Autonomy Dynamics. Ultimately, I hope to build more human-centric and sustainable mobility systems, drawing from traffic engineering, data science, control theory, and beyond. I'm actively seeking PhD opportunities for Fall 2027.</p>
+                <p class="text-justify">Hi, I'm Haopeng Deng, a Guangzhou Maritime University graduate who recently completed summer research at MIT. My work spans Physics-informed Learning, Surrogate Bayesian Optimization, and Mixed-Autonomy Dynamics. Ultimately, I hope to build more human-centric and sustainable mobility systems, drawing from traffic engineering, data science, control theory, and beyond. I'm actively seeking PhD opportunities for Fall 2027.</p>
                 <div class="callout-box">
                 <strong>Open to Collaboration:</strong> I love doing research and am always eager to connect with anyone sharing similar interests. Drop me an email anytime at <a href="mailto:qianyhp@gmail.com">qianyhp@gmail.com</a>!
                 </div>
@@ -168,6 +168,18 @@
 <section class="section-block" id="research-experiences">
     <h2>Research Experiences</h2>
 
+    <div class="experience" id="mit-summer-research">
+        <h3>MIT–UF–NEU Joint Summer Research Camp</h3>
+        <p class="meta-line"><em>Inference-Time Behavior Shaping of Autoregressive Driving Priors for Mixed-Autonomy Traffic Control</em> <span class="meta-date">05/2026–10/2026</span></p>
+        <p class="text-justify">At MIT, I worked with Ryan Hardesty Lewis in Prof. Cathy Wu's lab on inference-time behavior shaping for pretrained autoregressive driving models. I developed a framework that repeatedly selects native short-horizon actions to steer CAV behavior, and built a closed-loop platform integrating SMART/CAT-K, MetaDrive, and reactive IDM/MOBIL traffic. Using matched counterfactual rollouts and action-execution audits, I established repeatable CAV control across four traffic setups and traced how its motion changed neighboring vehicles' observations, applied controls, and speeds across six geometry–seed cases. This work provides a foundation for studying how local vehicle decisions influence surrounding traffic.</p>
+        <div class="project-images-scroll-container">
+            <img src="images/mit-research-overview.webp" alt="Inference-time behavior shaping: research overview" loading="lazy" decoding="async">
+            <img src="images/mit-counterfactual-evaluation.webp" alt="Matched counterfactual evaluation of native actions" loading="lazy" decoding="async">
+            <img src="images/mit-traffic-response.webp" alt="Traffic response to repeated native action selection" loading="lazy" decoding="async">
+        </div>
+    </div>
+
+
     <div class="experience">
         <h3>Guangdong Provincial Special Fund for Science and Technology Innovation Strategy</h3>
         <p class="meta-line"><em>Cooperative Game-Based Network Traffic Assignment Mechanisms for Enhancing Urban Transportation Efficiency</em> <span class="meta-date">07/2024-04/2026</span></p>
@@ -217,7 +229,7 @@
     <h3>MIT-UF-NEU Joint Summer Research Camp</h3>
     <p class="meta-line"><em>Massachusetts Institute of Technology</em> <span class="meta-date">05/2026 – 10/2026</span></p>
     <p class="text-justify">
-           Selected as one of 41 participants, I worked with Ryan Hardesty Lewis in Prof. Cathy Wu's lab on the GhostCAV project. We used an autoregressive trajectory generator for candidate motions, evaluated them via closed-loop simulation, then trained a scoring model that prioritizes safety, progress, and neighbor impact. This allows the CAV to adjust its choices and improve interactions in mixed-autonomy driving.
+           Selected as one of 41 participants, I joined an international research community spanning urban science, transportation engineering, and artificial intelligence. Exchanges with faculty, mentors, and fellow participants exposed me to emerging research across these fields and broadened my perspective on how learning and optimization can address urban and mobility challenges.
     </p>
   </div>
   <div class="project-item">
@@ -291,3 +303,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+
