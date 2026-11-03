@@ -262,9 +262,6 @@ ol {
     margin-left: 32px;
 }
 
-.main-nav a.is-active {
-    color: var(--text-primary);
-}
 
 .theme-toggle {
     display: inline-flex;
@@ -1374,25 +1371,45 @@ h3 {
     }
 }
 
-/* Selected Research: shared container, typography and experience separators above. */
-#selected-research > h2 {
-    margin-top: 0;
+/* Research cards reuse the homepage container, colours and typography. */
+.research-list {
+    max-width: 1200px;
+    margin: 32px auto 40px;
 }
 
-.research-entry {
+.research-author-key {
+    margin: 0 24px 14px;
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+}
+
+.container.research-card {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
-    gap: 32px;
-    align-items: center;
-    padding-top: 28px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    gap: 16px 28px;
+    padding: 24px;
+    margin: 0 0 24px;
+    box-sizing: border-box;
+    align-items: start;
 }
 
-.research-entry > div {
-    min-width: 0;
+.research-card-heading {
+    grid-column: 1 / -1;
 }
 
-.research-entry h3 {
-    margin-top: 0;
+.research-card h2 {
+    margin: 0;
+    font-size: var(--text-lg);
+    font-weight: 600;
+    line-height: var(--leading-snug);
+    letter-spacing: var(--tracking-snug);
+    color: var(--text-heading);
+}
+
+.research-authors {
+    margin: 6px 0 0;
+    font-size: var(--text-sm);
+    line-height: 1.4;
 }
 
 .research-figure {
@@ -1401,10 +1418,10 @@ h3 {
 
 .research-figure a {
     display: block;
-    padding: 6px;
     background: var(--media-bg);
     border: 1px solid var(--media-border);
     border-radius: 8px;
+    overflow: hidden;
 }
 
 .research-figure img {
@@ -1413,17 +1430,56 @@ h3 {
     height: auto;
 }
 
-.research-entry .research-status {
-    margin: 8px 0 16px;
+.research-copy {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 0;
+    font-size: 0.875rem;
+    line-height: 1.35;
 }
 
-.research-entry .research-links {
-    margin-bottom: 0;
+.research-description {
+    margin: 0 0 8px;
+    text-align: justify;
+    text-wrap: pretty;
 }
 
-@media (max-width: 768px) {
-    .research-entry {
+.research-publication {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 4px 14px;
+}
+
+.research-status,
+.research-links {
+    margin: 0;
+}
+
+.research-status {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1100px) {
+    .research-list {
+        margin: 20px 12px;
+    }
+
+    .research-author-key {
+        margin-left: 0;
+    }
+
+    .container.research-card {
         grid-template-columns: minmax(0, 1fr);
-        gap: 20px;
+        gap: 16px;
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    .research-copy {
+        font-size: var(--text-sm);
+        line-height: 1.5;
     }
 }
