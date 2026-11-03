@@ -29,9 +29,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;0,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-<link rel="stylesheet" href="research.css">
 </head>
-<body class="research-page"><header class="main-header">
+<body>
+    <header class="main-header">
         <div class="header-content">
             <h1 class="site-title"><a href="index.html">Haopeng Deng</a></h1>
             <nav class="main-nav">
@@ -46,21 +46,51 @@
                 </ul>
             </nav>
         </div>
-    </header><main class="research-main">
-<div class="research-intro"><p class="eyebrow">Haopeng Deng / Research</p><h1>Selected Research</h1><p class="intro-text">Three works on understanding traffic dynamics, making simulation calibration learnable, and computing sparse control under uncertainty.</p>
-<nav class="research-index" aria-label="Selected works"><a href="#spinflow">01 &nbsp; SpinFlow</a><a href="#flat">02 &nbsp; FLAT</a><a href="#sparse-control">03 &nbsp; Sparse control</a></nav></div><article class="research-work" id="spinflow" aria-labelledby="spinflow-title">
- <div class="work-heading"><div class="work-identity"><span class="work-number">01</span><span>SpinFlow</span></div><span class="work-tag">Traffic dynamics · Phase inference</span></div>
- <h2 id="spinflow-title">Reading traffic phases from vehicle trajectories</h2>
- <figure><a href="images/research-spinflow-v1.webp" target="_blank" aria-label="Open SpinFlow framework at full size"><img src="images/research-spinflow-v1.webp" alt="Wave-aligned sampling and a latent spin representation, with retained YTDJ observations and phase profiles. The model–data diagnostic is recomputed from the retained outputs." decoding="async"></a><figcaption>Wave-aligned sampling and a latent spin representation, with retained YTDJ observations and phase profiles. The model–data diagnostic is recomputed from the retained outputs.</figcaption></figure>
- <div class="work-body"><p>How can vehicle trajectories reveal the structure of a traffic transition? With SpinFlow, I study traffic phases as a continuous spatial mixture. Inspired by the Heisenberg model, we represent competition among free flow, synchronized flow, and wide moving jams through a latent spin field. Physics-regularized expectation–maximization infers this field from vehicle trajectories; the Phase Equilibrium Degree measures how well the inferred mixture agrees with the data. Across four real-world datasets, flow reconstruction reaches an R² of 0.940, and detected transitions align with documented lane-drop and on-ramp features. What interests me is the additional structure this representation makes visible: where phases coexist and where their balance breaks down. Turning that information into a useful intervention signal remains a separate control problem.</p><aside class="work-details"><p>IEEE ITSC 2026</p><div class="work-links"><a href="https://arxiv.org/abs/2605.23306" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/QianyHP/spinflow-traffic" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div></aside></div>
- </article><article class="research-work" id="flat" aria-labelledby="flat-title">
- <div class="work-heading"><div class="work-identity"><span class="work-number">02</span><span>FLAT</span></div><span class="work-tag">Simulation calibration · Surrogate learning</span></div>
- <h2 id="flat-title">Making the calibration objective learnable</h2>
- <figure><a href="images/research-flat-v1.webp" target="_blank" aria-label="Open FLAT framework at full size"><img src="images/research-flat-v1.webp" alt="An eight-component behavioral fingerprint reshapes the objective; sequential surrogate-guided acquisition allocates the remaining simulation budget." decoding="async"></a><figcaption>An eight-component behavioral fingerprint reshapes the objective; sequential surrogate-guided acquisition allocates the remaining simulation budget.</figcaption></figure>
- <div class="work-body"><p>An expensive simulator makes every evaluation count, but a surrogate can only guide the search if it can learn the objective. I developed FLAT around this upstream choice: how should simulated and observed traffic be compared? An eight-component behavioral fingerprint summarizes speed, acceleration, and stopping behavior, producing a smoother calibration landscape. A surrogate then allocates the remaining runs through uncertainty-aware sequential sampling. Across six traffic scenes with a budget of 100 simulations each, FLAT-GP achieved the lowest average behavioral error. The revealing comparison was the ablation: optimizing a speed-series objective instead increased final behavioral error by 81% on average, while switching among GP, random-forest, and neural-network surrogates changed the global mean by at most 4.2%. These results make objective design a practical part of sample-efficient learning, alongside model choice and search strategy.</p><aside class="work-details"><p>Preprint · 2026</p><div class="work-links"><a href="https://arxiv.org/abs/2610.04337" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a><a href="https://github.com/QianyHP/FLAT-calibration" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a></div></aside></div>
- </article><article class="research-work" id="sparse-control" aria-labelledby="sparse-control-title">
- <div class="work-heading"><div class="work-identity"><span class="work-number">03</span><span>Sparse stochastic control</span></div><span class="work-tag">Stochastic systems · Numerical control</span></div>
- <h2 id="sparse-control-title">When actuation also changes the noise</h2>
- <figure><a href="images/research-sparse-control-v1.webp" target="_blank" aria-label="Open Sparse stochastic control framework at full size"><img src="images/research-sparse-control-v1.webp" alt="PV and joint-actuator model instances connect to numerical feedback. The lower panels are independent reduced-model numerical illustrations, with ensemble-mean actuator inputs and uncertainty bands." decoding="async"></a><figcaption>PV and joint-actuator model instances connect to numerical feedback. The lower panels are independent reduced-model numerical illustrations, with ensemble-mean actuator inputs and uncertainty bands.</figcaption></figure>
- <div class="work-body"><p>When should a battery charge, remain idle, or discharge—and when can a joint actuator remain inactive? My contribution to this collaboration was implementing numerical schemes and examining the policies produced by sparse stochastic control models. The benchmarks include photovoltaic–battery storage and a simplified two-joint system, with noise intensity that depends on the control input. An ℓ₀ running cost penalizes time spent using an actuator, creating a trade-off between state performance and inactivity. Using monotone semi–Lagrangian approximations, I examined feedback policies, switching behavior, mesh refinement, and agreement with a scaled ℓ₁ alternative. The theoretical distinction becomes concrete in these comparisons: agreement on a saturated control grid does not ensure the same policy over continuous inputs, where diffusion–curvature coupling can change the preferred action.</p><aside class="work-details"><p>Journal of Dynamical and Control Systems · 2026</p><div class="work-links"><a href="https://doi.org/10.1007/s10883-026-09784-1" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a></div></aside></div>
- </article><div class="research-end"><a href="index.html#publications">All publications &amp; research experiences <span aria-hidden="true">↗</span></a><a href="#">Back to top ↑</a></div></main><script src="script.js"></script></body></html>
+    </header>
+
+    <div class="container">
+        <main class="right-column">
+            <section class="section-block" id="selected-research">
+                <h2>Selected Research</h2>
+                <article class="experience research-entry" id="spinflow" aria-labelledby="spinflow-title">
+                    <figure class="research-figure">
+                        <a href="images/research-spinflow-v1.webp" target="_blank" aria-label="Open SpinFlow framework at full size"><img title="Wave-aligned sampling and a latent spin representation, with retained YTDJ observations and phase profiles. The model–data diagnostic is recomputed from the retained outputs." loading="lazy" src="images/research-spinflow-v1.webp" alt="Wave-aligned sampling and a latent spin representation, with retained YTDJ observations and phase profiles. The model–data diagnostic is recomputed from the retained outputs." decoding="async"></a>
+                    </figure>
+                    <div>
+                        <h3 id="spinflow-title">SpinFlow: A Physics-Informed Spin Field Framework for Traffic Phase Inference and Transition Detection</h3>
+                        <p class="research-status"><em>IEEE ITSC 2026 · Oral presentation</em></p>
+                        <p>How can vehicle trajectories reveal the structure of a traffic transition? With SpinFlow, I study traffic phases as a continuous spatial mixture. Inspired by the Heisenberg model, we represent competition among free flow, synchronized flow, and wide moving jams through a latent spin field. Physics-regularized expectation–maximization infers this field from vehicle trajectories; the Phase Equilibrium Degree measures how well the inferred mixture agrees with the data. Across four real-world datasets, flow reconstruction reaches an R² of 0.940, and detected transitions align with documented lane-drop and on-ramp features. What interests me is the additional structure this representation makes visible: where phases coexist and where their balance breaks down. Turning that information into a useful intervention signal remains a separate control problem.</p>
+                        <p class="research-links"><a href="https://arxiv.org/abs/2605.23306" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://github.com/QianyHP/spinflow-traffic" target="_blank" rel="noopener noreferrer">Code</a></p>
+                    </div>
+                </article>
+
+                <article class="experience research-entry" id="flat" aria-labelledby="flat-title">
+                    <figure class="research-figure">
+                        <a href="images/research-flat-v1.webp" target="_blank" aria-label="Open FLAT framework at full size"><img title="An eight-component behavioral fingerprint reshapes the objective; sequential surrogate-guided acquisition allocates the remaining simulation budget." loading="lazy" src="images/research-flat-v1.webp" alt="An eight-component behavioral fingerprint reshapes the objective; sequential surrogate-guided acquisition allocates the remaining simulation budget." decoding="async"></a>
+                    </figure>
+                    <div>
+                        <h3 id="flat-title">FLAT: Smoothing the Rugged Landscape for Learnable, Sample-Efficient Traffic Calibration</h3>
+                        <p class="research-status"><em>Preprint · 2026</em></p>
+                        <p>An expensive simulator makes every evaluation count, but a surrogate can only guide the search if it can learn the objective. I developed FLAT around this upstream choice: how should simulated and observed traffic be compared? An eight-component behavioral fingerprint summarizes speed, acceleration, and stopping behavior, producing a smoother calibration landscape. A surrogate then allocates the remaining runs through uncertainty-aware sequential sampling. Across six traffic scenes with a budget of 100 simulations each, FLAT-GP achieved the lowest average behavioral error. The revealing comparison was the ablation: optimizing a speed-series objective instead increased final behavioral error by 81% on average, while switching among GP, random-forest, and neural-network surrogates changed the global mean by at most 4.2%. These results make objective design a practical part of sample-efficient learning, alongside model choice and search strategy.</p>
+                        <p class="research-links"><a href="https://arxiv.org/abs/2610.04337" target="_blank" rel="noopener noreferrer">Paper</a> / <a href="https://github.com/QianyHP/FLAT-calibration" target="_blank" rel="noopener noreferrer">Code</a></p>
+                    </div>
+                </article>
+
+                <article class="experience research-entry" id="sparse-control" aria-labelledby="sparse-control-title">
+                    <figure class="research-figure">
+                        <a href="images/research-sparse-control-v1.webp" target="_blank" aria-label="Open Sparse stochastic control framework at full size"><img title="PV and joint-actuator model instances connect to numerical feedback. The lower panels are independent reduced-model numerical illustrations, with ensemble-mean actuator inputs and uncertainty bands." loading="lazy" src="images/research-sparse-control-v1.webp" alt="PV and joint-actuator model instances connect to numerical feedback. The lower panels are independent reduced-model numerical illustrations, with ensemble-mean actuator inputs and uncertainty bands." decoding="async"></a>
+                    </figure>
+                    <div>
+                        <h3 id="sparse-control-title">Sparse Stochastic Optimal Control under Control-Dependent Diffusion and Time-Varying Dynamics</h3>
+                        <p class="research-status"><em>Journal of Dynamical and Control Systems · 2026</em></p>
+                        <p>When should a battery charge, remain idle, or discharge—and when can a joint actuator remain inactive? My contribution to this collaboration was implementing numerical schemes and examining the policies produced by sparse stochastic control models. The benchmarks include photovoltaic–battery storage and a simplified two-joint system, with noise intensity that depends on the control input. An ℓ₀ running cost penalizes time spent using an actuator, creating a trade-off between state performance and inactivity. Using monotone semi–Lagrangian approximations, I examined feedback policies, switching behavior, mesh refinement, and agreement with a scaled ℓ₁ alternative. The theoretical distinction becomes concrete in these comparisons: agreement on a saturated control grid does not ensure the same policy over continuous inputs, where diffusion–curvature coupling can change the preferred action.</p>
+                        <p class="research-links"><a href="https://doi.org/10.1007/s10883-026-09784-1" target="_blank" rel="noopener noreferrer">Paper</a></p>
+                    </div>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
