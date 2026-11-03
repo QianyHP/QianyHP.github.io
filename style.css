@@ -498,6 +498,8 @@ ol {
 #publications ol li {
     font-size: var(--text-base);
     line-height: var(--leading-meta);
+    text-align: justify;
+    text-wrap: pretty;
 }
 
 #awards-honors li {
