@@ -76,8 +76,8 @@
     --scrollbar-track: #262320;
     --scrollbar-thumb: #44403C;
     --scrollbar-thumb-hover: #57534E;
-    --bg-pattern-opacity: 0.32;
-    --bg-pattern-filter: invert(1) hue-rotate(180deg) brightness(0.42) contrast(0.88) sepia(0.15);
+    --bg-pattern-opacity: 0.48;
+    --bg-pattern-filter: invert(1) hue-rotate(180deg) brightness(0.85) contrast(0.95) sepia(0.15);
     --photo-bg: #2a2724;
     --iframe-bg: #ffffff;
     --media-bg: #ffffff;
