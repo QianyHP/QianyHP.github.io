@@ -240,7 +240,7 @@ ol {
     position: absolute;
     width: 0;
     height: 1.5px;
-    bottom: -2px;
+    bottom: 6px;
     left: 0;
     background-color: var(--accent);
     transition: width .25s cubic-bezier(0.25, 1, 0.5, 1);
