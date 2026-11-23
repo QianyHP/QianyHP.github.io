@@ -1489,3 +1489,15 @@ h3 {
         line-height: 1.5;
     }
 }
+
+.publications-heading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    column-gap: 1rem;
+}
+
+.publications-heading .research-author-key {
+    margin: 0 0 14px;
+}
