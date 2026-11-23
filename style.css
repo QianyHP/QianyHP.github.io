@@ -1500,6 +1500,6 @@ h3 {
 
 .publications-heading .research-author-key {
     font-size: 0.75rem;
-    color: var(--text-muted);
+    color: var(--text-secondary);
     margin: 0 0 14px;
 }
